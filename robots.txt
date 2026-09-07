@@ -1,0 +1,19 @@
+# robots.txt — FutureCity Properties
+# https://futurecityproperties.com
+
+User-agent: *
+Allow: /
+
+# Block private/admin areas
+Disallow: /admin/
+Disallow: /member/
+Disallow: /verify.html
+Disallow: /backend/
+
+# Allow CSS and JS for rendering
+Allow: /css/
+Allow: /js/
+Allow: /images/
+
+# Sitemap
+Sitemap: https://futurecityproperties.com/sitemap.xml

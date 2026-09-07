@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="5 BHK Independent Villa at Radhika Colony, West Marredpally, Hyderabad — Ground + First Floor on 245.33 Sq Yards. East facing, gated community. Explore details, gallery and book a site visit with FutureCity Properties.">
+<title>5 BHK Independent Villa | Radhika Colony, West Marredpally | FutureCity Properties</title>
+
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/utilities.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="icon" type="image/png" href="images/logo.png">
+
+    <style>
+        .hero-section {
+            padding-top: 9rem;
+            background: linear-gradient(160deg, #fdf6e3 0%, #fff 60%, #f0f7ff 100%);
+        }
+        .breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-size: 0.82rem;
+            color: var(--color-muted);
+            margin-bottom: 1.2rem;
+        }
+        .breadcrumb a { color: var(--color-gold-dark); text-decoration: none; }
+        .breadcrumb a:hover { text-decoration: underline; }
+        .gallery-grid {
+            width: 100%;
+            height: 480px;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-card);
+        }
+        .gallery-grid__main { width: 100%; height: 100%; overflow: hidden; border-radius: var(--radius-lg); }
+        .gallery-grid__main img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s ease; }
+        .gallery-grid__main:hover img { transform: scale(1.03); }
+        .stats-bar {
+            display: flex;
+            background: var(--color-surface, #ffffff);
+            border: 1px solid var(--color-border-gold);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-card);
+            overflow: hidden;
+            margin: 2rem 0;
+        }
+        .stats-bar__item {
+            flex: 1;
+            padding: 1.2rem 1rem;
+            text-align: center;
+            border-right: 1px solid var(--color-border);
+        }
+        .stats-bar__item:last-child { border-right: none; }
+        .stats-bar__label { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--color-muted); margin-bottom: 0.3rem; }
+        .stats-bar__value { font-size: 1rem; font-weight: 700; color: var(--color-heading); }
+        .stats-bar__value.green { color: #047857; }
+        .stats-bar__value.gold { color: var(--color-gold-dark); }
+        .spec-table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+        .spec-table tr { border-bottom: 1px solid var(--color-border); }
+        .spec-table tr:last-child { border-bottom: none; }
+        .spec-table td { padding: 0.75rem 0.5rem; }
+        .spec-table td:first-child { color: var(--color-muted); width: 45%; font-weight: 500; }
+        .spec-table td:last-child { color: var(--color-heading); font-weight: 600; }
+        .feature-pills { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem; }
+        .feature-pill {
+            display: inline-flex; align-items: center; gap: 0.4rem;
+            background: #f8f3e8; border: 1px solid #e0c97a;
+            color: #7a5c00; font-size: 0.82rem; font-weight: 600;
+            padding: 0.35rem 0.85rem; border-radius: 20px;
+        }
+        .amenity-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 1rem; }
+        .amenity-card {
+            background: #fff;
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-md);
+            padding: 1rem 0.75rem;
+            text-align: center;
+            transition: box-shadow 0.2s, border-color 0.2s;
+        }
+        .amenity-card:hover { box-shadow: 0 4px 20px rgba(176,141,55,0.15); border-color: var(--color-gold-light); }
+        .amenity-card__icon { font-size: 1.6rem; margin-bottom: 0.4rem; }
+        .amenity-card__label { font-size: 0.78rem; font-weight: 600; color: var(--color-heading); }
+        .price-box {
+            background: linear-gradient(135deg, #1a1206 0%, #3d2d0a 100%);
+            border-radius: var(--radius-lg);
+            padding: 1.5rem 2rem;
+            color: #fff;
+            margin-bottom: 1.5rem;
+        }
+        .price-box__label { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; opacity: 0.7; margin-bottom: 0.3rem; }
+        .price-box__amount { font-size: 2.4rem; font-weight: 800; color: #f7c948; line-height: 1; }
+        .price-box__note { font-size: 0.78rem; opacity: 0.6; margin-top: 0.4rem; }
+        .inquiry-sidebar { position: sticky; top: 7rem; }
+        .map-placeholder {
+            background: linear-gradient(135deg, #e8f4f8, #dce8f0);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-lg);
+            height: 200px;
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            color: var(--color-muted); font-size: 0.9rem; text-align: center; gap: 0.5rem;
+        }
+        .section-underline {
+            display: block; width: 3rem; height: 3px;
+            background: linear-gradient(90deg,#C9922D,#F7C948);
+            border-radius: 2px; margin: 0.4rem 0 1.5rem 0;
+        }
+        /* Prevent global h2 clamp from inflating section headings */
+        .detail-h2 {
+            font-size: 1.55rem !important;
+            font-weight: 700;
+            margin-bottom: 0.3rem;
+            color: var(--color-heading);
+            letter-spacing: -0.01em;
+        }
+        /* Prevent global h1 uppercase + clamp from oversizing the page title */
+        .detail-page h1 {
+            text-transform: none !important;
+            font-size: clamp(1.8rem, 3vw + 0.5rem, 2.6rem) !important;
+            line-height: 1.2 !important;
+        }
+        /* Compact footer override (global .footer adds 7rem top padding) */
+        .detail-page .footer {
+            padding: 1.5rem 0 !important;
+        }
+        /* Scroll progress bar */
+        .scroll-bar { position:fixed; top:0; left:0; height:3px; background:linear-gradient(90deg,#C9922D,#F7C948); width:0%; z-index:9999; transition:width 0.1s; }
+        /* WhatsApp FAB */
+        .wa-fab {
+            position: fixed; bottom: 2rem; right: 2rem; z-index: 500;
+            width: 56px; height: 56px; border-radius: 50%;
+            background: #25D366; color: #fff;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.6rem; text-decoration: none;
+            box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .wa-fab:hover { transform: scale(1.1); box-shadow: 0 6px 28px rgba(37,211,102,0.55); }
+        @media (max-width: 900px) {
+            .gallery-grid { height: 320px; }
+            .stats-bar { flex-wrap: wrap; }
+            .stats-bar__item { min-width: 48%; border-right: none; border-bottom: 1px solid var(--color-border); }
+            .inquiry-sidebar { position: relative; top: auto; }
+        }
+        @media (max-width: 640px) {
+            .gallery-grid { height: 240px; }
+        }
+    </style>
+
+    <!-- SEO Meta -->
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://futurecityproperties.com/project-details.html">
+    <meta property="og:title" content="5 BHK Independent Villa">
+    <meta property="og:description" content="5 BHK Independent Villa at Radhika Colony, West Marredpally, Hyderabad — Ground + First Floor on 245.33 Sq Yards. East facing, gated community. Explore details, gallery and book a site visit with Futu">
+    <meta property="og:url" content="https://futurecityproperties.com/project-details.html">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://futurecityproperties.com/images/logo.png">
+    <meta property="og:site_name" content="FutureCity Properties">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="5 BHK Independent Villa">
+    <meta name="twitter:description" content="5 BHK Independent Villa at Radhika Colony, West Marredpally, Hyderabad — Ground + First Floor on 245.33 Sq Yards. East facing, gated community. Explore details, gallery and book a site visit with Futu">
+    <meta name="twitter:image" content="https://futurecityproperties.com/images/logo.png">
+</head>
+<body class="detail-page">
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-bar" id="scrollBar"></div>
+    <canvas id="ambientCanvas" class="bg-ambient-canvas"></canvas>
+    <div class="custom-cursor-dot"></div>
+    <div class="custom-cursor-ring"></div>
+
+    <!-- NAVIGATION -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="index.html" class="brand-logo">
+                <div class="logo-circle"><img src="images/logo.png" alt="FutureCity Properties Logo" class="header-logo-img" /></div>
+                <div class="brand-name">
+                    <span class="brand-name-main">FutureCity</span>
+                    <span class="brand-name-sub">Properties</span>
+                </div>
+            </a>
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="projects.html" class="nav-link active">Projects &amp; Plots</a>
+                <a href="membership.html" class="nav-link" style="color:var(--color-gold);">Membership</a>
+                <a href="investment.html" class="nav-link">Investment</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="gallery.html" class="nav-link">Gallery</a>
+                <a href="blogs.html" class="nav-link">Insights</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+            <div style="display:flex;align-items:center;gap:1rem;">
+                <button class="btn btn-gold open-site-visit-modal" style="display:none;display:md-inline-flex;"><span>Book Site Visit</span></button>
+                <button class="hamburger-btn" aria-label="Toggle Mobile Menu"><span></span><span></span><span></span></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO / GALLERY -->
+    <section class="hero-section" style="padding: 8.5rem 0 2.5rem;">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="index.html">Home</a>
+                <span>&rsaquo;</span>
+                <a href="projects.html">Projects &amp; Plots</a>
+                <span>&rsaquo;</span>
+                <span>5 BHK Villa – West Marredpally</span>
+            </div>
+
+            <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:1.5rem;margin-bottom:2rem;">
+                <div>
+                    <div style="display:flex;gap:0.5rem;margin-bottom:0.75rem;flex-wrap:wrap;">
+                        <span class="badge badge-villa">Gated Community</span>
+                        <span class="badge badge-gold">East Facing</span>
+                        <span class="badge" style="background:#e0f2fe;color:#0369a1;border:1px solid #7dd3fc;font-weight:700;font-size:0.72rem;padding:0.25rem 0.6rem;border-radius:4px;">Independent Villa</span>
+                    </div>
+                    <h1 style="font-size:2.5rem;margin-bottom:0.5rem;line-height:1.15;">5 BHK Independent Villa</h1>
+                    <div style="color:var(--color-gold-dark);font-size:1rem;font-weight:600;">
+                        &#128205; P#3A, Radhika Colony, West Marredpally, Secunderabad
+                    </div>
+                    <div style="margin-top:0.5rem;font-size:0.87rem;color:var(--color-muted);">
+                        Ground + First Floor &nbsp;&middot;&nbsp; Built 1995 &nbsp;&middot;&nbsp; Resale / Ready to Move
+                    </div>
+                </div>
+                <div style="text-align:right;">
+                    <div style="font-size:0.78rem;color:var(--color-muted);text-transform:uppercase;letter-spacing:0.06em;">Asking Price</div>
+                    <div class="font-number" style="font-size:2.8rem;font-weight:800;color:var(--color-gold-dark);line-height:1.1;">Rs 3.75 Cr</div>
+                    <div style="font-size:0.76rem;color:var(--color-muted);margin-top:0.2rem;">All-inclusive &middot; Negotiable</div>
+                </div>
+            </div>
+
+            <div class="gallery-grid reveal-scale">
+                <div class="gallery-grid__main">
+                    <img src="https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&w=1200&q=80" alt="5 BHK Independent Villa Front View – Radhika Colony, West Marredpally">
+                </div>
+            </div>
+
+            <div class="stats-bar">
+                <div class="stats-bar__item">
+                    <div class="stats-bar__label">Bedrooms</div>
+                    <div class="stats-bar__value">5 BHK</div>
+                </div>
+                <div class="stats-bar__item">
+                    <div class="stats-bar__label">Bathrooms</div>
+                    <div class="stats-bar__value">4 Bath</div>
+                </div>
+                <div class="stats-bar__item">
+                    <div class="stats-bar__label">Built-up Area</div>
+                    <div class="stats-bar__value">2,600 sq ft</div>
+                </div>
+                <div class="stats-bar__item">
+                    <div class="stats-bar__label">Plot Size</div>
+                    <div class="stats-bar__value green">245.33 Sq Yrds</div>
+                </div>
+                <div class="stats-bar__item">
+                    <div class="stats-bar__label">Price / Sq Ft</div>
+                    <div class="stats-bar__value gold">&#8776; &#8377;14,423</div>
+                </div>
+                <div class="stats-bar__item">
+                    <div class="stats-bar__label">Structure</div>
+                    <div class="stats-bar__value">G + 1 Floor</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DETAILS + SIDEBAR -->
+    <section style="padding: 2rem 0 4rem; position:relative; z-index:10;">
+        <div class="container">
+            <div class="grid grid-3 gap-lg">
+
+                <!-- MAIN CONTENT -->
+                <div style="grid-column:span 2;" class="reveal-left">
+
+                    <h2 class="detail-h2">Property Overview</h2>
+                    <span class="section-underline"></span>
+                    <p style="color:#334155;line-height:1.75;margin-bottom:1.75rem;">
+                        Presenting a rare and spacious <strong>5 BHK Independent Villa</strong> in the prestigious
+                        <strong>Radhika Colony, West Marredpally</strong> — one of Secunderabad's most sought-after residential
+                        addresses. Spread across <strong>245.33 Square Yards</strong> with a generous built-up area of
+                        <strong>2,600 sq ft</strong> across Ground and First Floors, this East-facing villa sits within a
+                        secure gated community. Originally built in 1995 and well-maintained, it offers an excellent
+                        opportunity for end-use or premium rental income in a location that commands strong appreciation.
+                    </p>
+
+                    <h3 style="font-size:1.3rem;color:var(--color-gold-dark);margin-bottom:0.4rem;">Key Specifications</h3>
+                    <span class="section-underline"></span>
+                    <div class="glass-panel" style="padding:1.5rem;margin-bottom:2.5rem;background:#fff;">
+                        <table class="spec-table">
+                            <tr><td>Property ID</td><td>P#3A</td></tr>
+                            <tr><td>Location</td><td>Radhika Colony, West Marredpally, Secunderabad</td></tr>
+                            <tr><td>Configuration</td><td>5 BHK &ndash; 4 Bedrooms + 1 Multipurpose Room</td></tr>
+                            <tr><td>Bathrooms</td><td>4 Attached Bathrooms</td></tr>
+                            <tr><td>Floors</td><td>Ground Floor + First Floor (G+1)</td></tr>
+                            <tr><td>Built-up Area</td><td>2,600 sq ft (approx.)</td></tr>
+                            <tr><td>Plot / Lot Size</td><td>245.33 Square Yards</td></tr>
+                            <tr><td>Facing</td><td>East Facing</td></tr>
+                            <tr><td>Year Built</td><td>1995 (Well-maintained)</td></tr>
+                            <tr><td>Property Type</td><td>Independent Villa</td></tr>
+                            <tr><td>Community</td><td>Gated Community</td></tr>
+                            <tr><td>Status</td><td>Ready to Move-In / Resale</td></tr>
+                            <tr><td>Asking Price</td><td style="color:var(--color-gold-dark);">Rs 3.75 Crore (All-inclusive)</td></tr>
+                            <tr><td>Price per Sq Ft</td><td>&#8776; &#8377;14,423 / sq ft</td></tr>
+                            <tr><td>Price per Sq Yd (plot)</td><td>&#8776; &#8377;1,53,000 / sq yd</td></tr>
+                        </table>
+                    </div>
+
+                    <h3 style="font-size:1.3rem;color:var(--color-gold-dark);margin-bottom:0.4rem;">Property Highlights</h3>
+                    <span class="section-underline"></span>
+                    <div class="feature-pills" style="margin-bottom:2.5rem;">
+                        <span class="feature-pill">&#9728; East Facing</span>
+                        <span class="feature-pill">&#127968; Gated Community</span>
+                        <span class="feature-pill">&#127968; G+1 Independent Villa</span>
+                        <span class="feature-pill">&#128208; 245.33 Sq Yrds Plot</span>
+                        <span class="feature-pill">&#128716; 5 Bedrooms</span>
+                        <span class="feature-pill">&#128704; 4 Attached Baths</span>
+                        <span class="feature-pill">&#128197; Built 1995</span>
+                        <span class="feature-pill">&#128273; Ready to Move</span>
+                        <span class="feature-pill">&#127807; Garden Area</span>
+                        <span class="feature-pill">&#128274; 24x7 Security</span>
+                        <span class="feature-pill">&#128664; Covered Car Parking</span>
+                        <span class="feature-pill">&#128742; Wide Colony Roads</span>
+                    </div>
+
+                    <h3 style="font-size:1.3rem;color:var(--color-gold-dark);margin-bottom:0.4rem;">Floor-wise Layout</h3>
+                    <span class="section-underline"></span>
+                    <div class="grid grid-2 gap-md" style="margin-bottom:2.5rem;">
+                        <div class="glass-panel" style="padding:1.5rem;background:#fff;">
+                            <div style="font-weight:700;font-size:0.95rem;color:var(--color-heading);margin-bottom:1rem;padding-bottom:0.5rem;border-bottom:2px solid #f7c948;">
+                                &#127968; Ground Floor
+                            </div>
+                            <ul style="list-style:none;padding:0;margin:0;font-size:0.88rem;color:#334155;line-height:2;">
+                                <li>&#10004; Living &amp; Dining Area</li>
+                                <li>&#10004; 2 Bedrooms (1 Master w/ attached bath)</li>
+                                <li>&#10004; Modular Kitchen</li>
+                                <li>&#10004; 2 Bathrooms</li>
+                                <li>&#10004; Covered Car Parking</li>
+                                <li>&#10004; Sit-out / Garden Area</li>
+                            </ul>
+                        </div>
+                        <div class="glass-panel" style="padding:1.5rem;background:#fff;">
+                            <div style="font-weight:700;font-size:0.95rem;color:var(--color-heading);margin-bottom:1rem;padding-bottom:0.5rem;border-bottom:2px solid #f7c948;">
+                                &#127970; First Floor
+                            </div>
+                            <ul style="list-style:none;padding:0;margin:0;font-size:0.88rem;color:#334155;line-height:2;">
+                                <li>&#10004; 3 Bedrooms (1 Master w/ attached bath)</li>
+                                <li>&#10004; Family Lounge / Study Room</li>
+                                <li>&#10004; 2 Bathrooms</li>
+                                <li>&#10004; East-Facing Open Balconies</li>
+                                <li>&#10004; Utility / Laundry Area</li>
+                                <li>&#10004; Terrace Access</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h3 style="font-size:1.3rem;color:var(--color-gold-dark);margin-bottom:0.4rem;">Community Amenities</h3>
+                    <span class="section-underline"></span>
+                    <div class="amenity-grid" style="margin-bottom:2.5rem;">
+                        <div class="amenity-card"><div class="amenity-card__icon">&#128274;</div><div class="amenity-card__label">24x7 Gated Security</div></div>
+                        <div class="amenity-card"><div class="amenity-card__icon">&#128664;</div><div class="amenity-card__label">Covered Car Parking</div></div>
+                        <div class="amenity-card"><div class="amenity-card__icon">&#127807;</div><div class="amenity-card__label">Landscaped Garden</div></div>
+                        <div class="amenity-card"><div class="amenity-card__icon">&#128167;</div><div class="amenity-card__label">Municipal Water Supply</div></div>
+                        <div class="amenity-card"><div class="amenity-card__icon">&#9889;</div><div class="amenity-card__label">Underground Cabling</div></div>
+                        <div class="amenity-card"><div class="amenity-card__icon">&#128739;</div><div class="amenity-card__label">Wide Internal Roads</div></div>
+                        <div class="amenity-card"><div class="amenity-card__icon">&#127758;</div><div class="amenity-card__label">High-Speed Internet Ready</div></div>
+                        <div class="amenity-card"><div class="amenity-card__icon">&#127973;</div><div class="amenity-card__label">Nearby Hospitals</div></div>
+                    </div>
+
+                    <h3 style="font-size:1.3rem;color:var(--color-gold-dark);margin-bottom:0.4rem;">Location Advantages</h3>
+                    <span class="section-underline"></span>
+                    <div class="glass-panel" style="padding:1.5rem;background:#fff;margin-bottom:2.5rem;">
+                        <div class="grid grid-2 gap-md" style="font-size:0.88rem;color:#334155;line-height:1.9;">
+                            <div>
+                                <div style="font-weight:700;color:var(--color-heading);margin-bottom:0.5rem;">&#127979; Education</div>
+                                <ul style="list-style:none;padding:0;margin:0;">
+                                    <li>&bull; St. Francis Grammar School – 0.5 km</li>
+                                    <li>&bull; Holy Mary High School – 0.8 km</li>
+                                    <li>&bull; Loyola Academy – 2 km</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <div style="font-weight:700;color:var(--color-heading);margin-bottom:0.5rem;">&#127973; Healthcare</div>
+                                <ul style="list-style:none;padding:0;margin:0;">
+                                    <li>&bull; Yashoda Hospital – 1.5 km</li>
+                                    <li>&bull; Apollo Clinic – 1 km</li>
+                                    <li>&bull; Care Hospital – 2.2 km</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <div style="font-weight:700;color:var(--color-heading);margin-bottom:0.5rem;">&#128717; Retail &amp; Dining</div>
+                                <ul style="list-style:none;padding:0;margin:0;">
+                                    <li>&bull; Paradise Restaurant – 1.2 km</li>
+                                    <li>&bull; D-Mart – 0.9 km</li>
+                                    <li>&bull; Rasoolpura Market – 1 km</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <div style="font-weight:700;color:var(--color-heading);margin-bottom:0.5rem;">&#128649; Connectivity</div>
+                                <ul style="list-style:none;padding:0;margin:0;">
+                                    <li>&bull; Secunderabad Railway Stn – 2.5 km</li>
+                                    <li>&bull; MMTS Marredpally – 1.2 km</li>
+                                    <li>&bull; Outer Ring Road – 8 km</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3 style="font-size:1.3rem;color:var(--color-gold-dark);margin-bottom:0.4rem;">Location on Map</h3>
+                    <span class="section-underline"></span>
+                    <div class="map-placeholder">
+                        <div style="font-size:2rem;">&#128205;</div>
+                        <div style="font-weight:700;color:var(--color-heading);">P#3A, Radhika Colony</div>
+                        <div>West Marredpally, Secunderabad – 500026</div>
+                        <a href="https://www.google.com/maps/search/Radhika+Colony+West+Marredpally+Secunderabad" target="_blank" rel="noopener"
+                           style="margin-top:0.5rem;color:var(--color-gold-dark);font-weight:600;font-size:0.85rem;text-decoration:none;">
+                            Open in Google Maps &#8599;
+                        </a>
+                    </div>
+                </div>
+
+                <!-- SIDEBAR -->
+                <div class="reveal-right">
+                    <div class="inquiry-sidebar">
+                        <div class="price-box">
+                            <div class="price-box__label">Asking Price</div>
+                            <div class="price-box__amount">Rs 3.75 Cr</div>
+                            <div class="price-box__note">All-inclusive &middot; Negotiable</div>
+                        </div>
+
+                        <div class="glass-panel" style="padding:1.25rem;background:#fff;border-color:var(--color-border-gold);margin-bottom:1.5rem;">
+                            <div style="font-weight:700;font-size:0.85rem;color:var(--color-heading);margin-bottom:0.75rem;text-transform:uppercase;letter-spacing:0.05em;">Quick Facts</div>
+                            <div style="font-size:0.86rem;color:#334155;">
+                                <div style="display:flex;justify-content:space-between;border-bottom:1px solid var(--color-border);padding:0.35rem 0;">
+                                    <span style="color:var(--color-muted);">Type</span><span style="font-weight:600;">Independent Villa</span>
+                                </div>
+                                <div style="display:flex;justify-content:space-between;border-bottom:1px solid var(--color-border);padding:0.35rem 0;">
+                                    <span style="color:var(--color-muted);">Config</span><span style="font-weight:600;">5 Bed / 4 Bath</span>
+                                </div>
+                                <div style="display:flex;justify-content:space-between;border-bottom:1px solid var(--color-border);padding:0.35rem 0;">
+                                    <span style="color:var(--color-muted);">Built-up</span><span style="font-weight:600;">2,600 sq ft</span>
+                                </div>
+                                <div style="display:flex;justify-content:space-between;border-bottom:1px solid var(--color-border);padding:0.35rem 0;">
+                                    <span style="color:var(--color-muted);">Plot Size</span><span style="font-weight:600;color:#047857;">245.33 Sq Yrds</span>
+                                </div>
+                                <div style="display:flex;justify-content:space-between;border-bottom:1px solid var(--color-border);padding:0.35rem 0;">
+                                    <span style="color:var(--color-muted);">Floors</span><span style="font-weight:600;">G + 1</span>
+                                </div>
+                                <div style="display:flex;justify-content:space-between;border-bottom:1px solid var(--color-border);padding:0.35rem 0;">
+                                    <span style="color:var(--color-muted);">Facing</span><span style="font-weight:600;">East</span>
+                                </div>
+                                <div style="display:flex;justify-content:space-between;padding:0.35rem 0;">
+                                    <span style="color:var(--color-muted);">Status</span><span style="font-weight:600;color:#047857;">Ready to Move</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="glass-panel" style="padding:1.75rem;background:#fff;border-color:var(--color-border-gold);box-shadow:var(--shadow-card);">
+                            <h3 style="font-size:1.15rem;margin-bottom:0.4rem;color:var(--color-heading);">Schedule a Site Visit</h3>
+                            <p style="font-size:0.8rem;color:var(--color-muted);margin-bottom:1.2rem;">Get floor plans, title documents, and a private walkthrough within 24 hours.</p>
+                            <form id="contactForm">
+                                <div style="margin-bottom:0.85rem;">
+                                    <input type="text" name="name" required placeholder="Full Name *" class="glass-input">
+                                </div>
+                                <div style="margin-bottom:0.85rem;">
+                                    <input type="tel" name="phone" required placeholder="Phone / WhatsApp *" class="glass-input">
+                                </div>
+                                <div style="margin-bottom:0.85rem;">
+                                    <input type="email" name="email" placeholder="Email Address" class="glass-input">
+                                </div>
+                                <div style="margin-bottom:0.85rem;">
+                                    <select class="glass-input" name="interest">
+                                        <option value="">Interested in…</option>
+                                        <option>5 BHK Independent Villa – Rs 3.75 Cr</option>
+                                        <option>Rental Income / Investment</option>
+                                        <option>Need More Information</option>
+                                    </select>
+                                </div>
+                                <div style="margin-bottom:1.2rem;">
+                                    <textarea name="message" placeholder="Any specific requirements…" class="glass-input" rows="3" style="resize:vertical;"></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-gold" style="width:100%;font-size:0.92rem;">
+                                    &#128222; Request Callback &amp; Brochure
+                                </button>
+                                <div style="margin-top:0.75rem;text-align:center;font-size:0.76rem;color:var(--color-muted);">
+                                    Or call us:&nbsp;
+                                    <a href="tel:+919876543210" style="color:var(--color-gold-dark);font-weight:700;text-decoration:none;">+91 98765 43210</a>
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="glass-panel" style="padding:1.25rem;background:#fff;margin-top:1.25rem;display:flex;align-items:center;gap:1rem;">
+                            <div style="width:46px;height:46px;border-radius:50%;background:linear-gradient(135deg,#c9922d,#f7c948);display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0;">&#128100;</div>
+                            <div>
+                                <div style="font-weight:700;color:var(--color-heading);font-size:0.92rem;">FutureCity Advisor</div>
+                                <div style="font-size:0.76rem;color:var(--color-muted);">West Marredpally Specialist</div>
+                                <a href="tel:+919876543210" style="font-size:0.8rem;color:var(--color-gold-dark);font-weight:600;text-decoration:none;">&#128222; Call Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section style="background:linear-gradient(135deg,#fdf6e3,#fff);padding:3rem 0;position:relative;z-index:10;">
+        <div class="container" style="text-align:center;">
+            <div style="font-size:0.78rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--color-muted);margin-bottom:0.5rem;">Explore More</div>
+            <h2 style="font-size:1.6rem;font-weight:700;margin-bottom:0.75rem;">Looking for More Properties?</h2>
+            <p style="color:#64748B;max-width:480px;margin:0 auto 1.5rem;">Browse our full portfolio of exclusive plots, villas, and commercial spaces across Hyderabad.</p>
+            <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+                <a href="projects.html" class="btn btn-gold">View All Projects</a>
+                <a href="contact.html" style="border:2px solid var(--color-gold);color:var(--color-gold-dark);padding:0.65rem 1.5rem;border-radius:var(--radius-md);font-weight:700;text-decoration:none;transition:all 0.2s;">Contact an Advisor</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+        <footer class="footer">
+        <div class="container">
+            <div class="grid grid-4 gap-lg">
+                <div>
+                    <a href="index.html" class="brand-logo footer-brand">
+                        <div class="logo-circle"><img src="images/logo.png" alt="FutureCity Properties"
+                                class="header-logo-img" /></div>
+                    </a>
+                    <p class="footer-description">Hyderabad’s premier luxury real estate advisory firm specializing in
+                        verified open plots, villa estates, and sky residences.</p>
+                </div>
+
+                <div>
+                    <h4 class="footer-heading">Navigation</h4>
+                    <div class="footer-links">
+                        <a href="about.html">About FutureCity</a>
+                        <a href="projects.html">Projects & Plots</a>
+                        <a href="membership.html">Membership</a>
+                        <a href="member/login.html">Member Portal</a>
+                        <a href="investment.html">Investment Guide</a>
+                        <a href="services.html">Our Services</a>
+                        <a href="contact.html">Contact Advisory</a>
+                        <a href="admin/login.html" style="color:rgba(255,255,255,0.2);">Admin Access</a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="footer-heading">Corridors</h4>
+                    <div class="footer-links">
+                        <a href="projects.html">Mucherla Future City Plots</a>
+                        <a href="projects.html">Kokapet Villa Estates</a>
+                        <a href="projects.html">Neopolis Sky Villas</a>
+                        <a href="projects.html">Financial District Hub</a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="footer-heading">Private Insights</h4>
+                    <p style="font-size: 0.85rem; color: #94A3B8;">Receive confidential pre-launch price sheets and plot
+                        layout maps.</p>
+                    <form id="newsletterForm" class="footer-newsletter-form">
+                        <input type="email" placeholder="Your Email..." required class="glass-input"
+                            style="font-size: 0.85rem; padding: 0.6rem 1rem;">
+                        <button type="submit" class="btn btn-gold" style="padding: 0.6rem 1rem;">Join</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div>&copy; 2026 FutureCity Properties Pvt. Ltd. All rights reserved. TS-RERA Regd. Real Estate Agent.
+                </div>
+                <div class="flex gap-md">
+                    <a href="privacy.html" style="color: #94A3B8;">Privacy Policy</a>
+                    <a href="terms.html" style="color: #94A3B8;">Terms & Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/919876543210?text=Hi%2C%20I%20am%20interested%20in%20the%205%20BHK%20Villa%20at%20Radhika%20Colony%2C%20West%20Marredpally" target="_blank" rel="noopener" class="wa-fab" title="Chat on WhatsApp">&#128362;</a>
+
+    <script src="js/cursor.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/scroll.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/forms.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        // Scroll progress bar
+        window.addEventListener('scroll', function() {
+            var el = document.getElementById('scrollBar');
+            if (!el) return;
+            var scrolled = (document.documentElement.scrollTop / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+            el.style.width = scrolled + '%';
+        });
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "RealEstateListing",
+                "name": "5 BHK Independent Villa at Radhika Colony, West Marredpally",
+                "description": "Ground + First Floor Villa on 245.33 Sq Yards. East Facing, Gated Community.",
+                "url": "https://futurecityproperties.com/project-details.html",
+                "datePosted": "2026-01-01",
+                "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "P#3A, Radhika Colony, West Marredpally",
+                    "addressLocality": "Secunderabad",
+                    "addressRegion": "Telangana",
+                    "addressCountry": "IN"
+                }
+            },
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://futurecityproperties.com/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Projects",
+                        "item": "https://futurecityproperties.com/projects.html"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "5 BHK Independent Villa"
+                    }
+                ]
+            }
+        ]
+    }
+    </script>
+</body>
+</html>

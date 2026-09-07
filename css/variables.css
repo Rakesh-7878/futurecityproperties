@@ -1,0 +1,88 @@
+/* ==========================================================================
+   FUTURECITY PROPERTIES - DESIGN SYSTEM & CSS VARIABLES
+   Ultra-Luxury Pristine White & Gold Architecture Theme (2026 Edition)
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Space+Grotesk:wght@400;500;600;700&family=Syne:wght@600;700;800&family=Playfair+Display:ital,wght@1,500;1,600;1,700&display=swap');
+
+:root {
+    /* Color Palette - Light Pristine Luxury */
+    --color-primary: #FFFFFF;
+    --color-secondary: #F8FAFC;
+    --color-tertiary: #F1F5F9;
+    --color-deep-bg: #FAFAFA;
+    
+    /* Dark Text Colors for High Contrast on White */
+    --color-heading: #0B1320;
+    --color-body: #334155;
+    --color-muted: #64748B;
+    --color-white: #FFFFFF;
+    --color-silver: #475569;
+    
+    /* Gold & Metallic Accents */
+    --color-gold: #B8860B;
+    --color-gold-light: #D4AF37;
+    --color-gold-dark: #8B6508;
+    --color-gold-glow: rgba(184, 134, 11, 0.2);
+    --color-gold-gradient: linear-gradient(135deg, #D4AF37 0%, #B8860B 50%, #8B6508 100%);
+    
+    /* Borders & Dividers */
+    --color-border: rgba(15, 23, 42, 0.08);
+    --color-border-gold: rgba(184, 134, 11, 0.3);
+
+    /* Gradients */
+    --gradient-bg: linear-gradient(180deg, #FFFFFF 0%, #F8FAFC 50%, #F1F5F9 100%);
+    --gradient-hero-overlay: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.85) 75%, #FFFFFF 100%);
+    --gradient-card: linear-gradient(135deg, #FFFFFF 0%, #F8FAFC 100%);
+    --gradient-glass: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(248, 250, 252, 0.7) 100%);
+    --gradient-gold-text: linear-gradient(90deg, #0B1320 0%, #B8860B 50%, #D4AF37 100%);
+    
+    /* Glassmorphism - Light Luxury */
+    --glass-bg: rgba(255, 255, 255, 0.85);
+    --glass-bg-hover: rgba(255, 255, 255, 0.95);
+    --glass-border: rgba(184, 134, 11, 0.2);
+    --glass-blur: blur(20px);
+    --glass-shadow: 0 20px 40px rgba(15, 23, 42, 0.06), 0 1px 3px rgba(0, 0, 0, 0.05);
+    
+    /* Typography */
+    --font-heading: 'Syne', 'Clash Display', -apple-system, sans-serif;
+    --font-body: 'Plus Jakarta Sans', system-ui, sans-serif;
+    --font-number: 'Space Grotesk', monospace;
+    --font-accent: 'Playfair Display', Georgia, serif;
+
+    /* Spacing System */
+    --space-xs: 0.5rem;
+    --space-sm: 1rem;
+    --space-md: 2rem;
+    --space-lg: 4rem;
+    --space-xl: 7rem;
+    --space-2xl: 10rem;
+    
+    /* Border Radius */
+    --radius-sm: 8px;
+    --radius-md: 16px;
+    --radius-lg: 24px;
+    --radius-xl: 36px;
+    --radius-full: 9999px;
+
+    /* Shadows & Glows */
+    --shadow-subtle: 0 10px 30px rgba(15, 23, 42, 0.05);
+    --shadow-card: 0 15px 35px rgba(15, 23, 42, 0.08);
+    --shadow-gold-glow: 0 10px 30px rgba(184, 134, 11, 0.15);
+
+    /* Transitions & Easing */
+    --ease-luxury: cubic-bezier(0.16, 1, 0.3, 1);
+    --ease-smooth: cubic-bezier(0.25, 1, 0.5, 1);
+    --transition-fast: 0.25s var(--ease-luxury);
+    --transition-medium: 0.45s var(--ease-luxury);
+    --transition-slow: 0.8s var(--ease-luxury);
+
+    /* Z-Index Hierarchy */
+    --z-background: -1;
+    --z-normal: 1;
+    --z-content: 10;
+    --z-sticky: 100;
+    --z-header: 1000;
+    --z-modal: 2000;
+    --z-cursor: 9999;
+}

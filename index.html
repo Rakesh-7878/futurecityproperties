@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore verified residential plots, villas, apartments and investment opportunities in Hyderabad with FutureCity Properties. HMDA & TS-RERA approved open plots, luxury gated villas, and sky estates across Neopolis, Kokapet & Mucherla Future City.">
+<meta name="author" content="FutureCity Properties">
+    <title>FutureCity Properties | Premium Real Estate in Hyderabad</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/utilities.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/logo.png">
+
+    <!-- SEO Meta -->
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://futurecityproperties.com/">
+    <meta property="og:title" content="FutureCity Properties">
+    <meta property="og:description" content="Explore verified residential plots, villas, apartments and investment opportunities in Hyderabad with FutureCity Properties. HMDA & TS-RERA approved open plots, luxury gated villas, and sky estates ac">
+    <meta property="og:url" content="https://futurecityproperties.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://futurecityproperties.com/images/logo.png">
+    <meta property="og:site_name" content="FutureCity Properties">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="FutureCity Properties">
+    <meta name="twitter:description" content="Explore verified residential plots, villas, apartments and investment opportunities in Hyderabad with FutureCity Properties. HMDA & TS-RERA approved open plots, luxury gated villas, and sky estates ac">
+    <meta name="twitter:image" content="https://futurecityproperties.com/images/logo.png">
+
+    <!-- SEO Meta -->
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://futurecityproperties.com/">
+    <meta property="og:title" content="FutureCity Properties">
+    <meta property="og:description" content="Explore verified residential plots, villas, apartments and investment opportunities in Hyderabad with FutureCity Properties. HMDA & TS-RERA approved open plots, luxury gated villas, and sky estates ac">
+    <meta property="og:url" content="https://futurecityproperties.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://futurecityproperties.com/images/logo.png">
+    <meta property="og:site_name" content="FutureCity Properties">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="FutureCity Properties">
+    <meta name="twitter:description" content="Explore verified residential plots, villas, apartments and investment opportunities in Hyderabad with FutureCity Properties. HMDA & TS-RERA approved open plots, luxury gated villas, and sky estates ac">
+    <meta name="twitter:image" content="https://futurecityproperties.com/images/logo.png">
+</head>
+
+<body>
+
+    <!-- Ambient Canvas & Preloader -->
+    <canvas id="ambientCanvas" class="bg-ambient-canvas"></canvas>
+
+    <div class="preloader">
+        <!-- Spinning ring + circular logo -->
+        <div class="preloader-logo-wrap">
+            <div class="preloader-logo-circle">
+                <img src="images/logo.png" alt="FutureCity Properties" class="preloader-logo-img" />
+            </div>
+        </div>
+
+        <!-- Brand name & tagline -->
+        <div class="preloader-brand">
+            <span class="preloader-brand-main">FutureCity</span>
+            <span class="preloader-brand-sub">Properties</span>
+        </div>
+        <div class="preloader-tagline">We Make in Quality</div>
+
+        <!-- Progress bar -->
+        <div class="preloader-bar-bg">
+            <div class="preloader-bar-fill"></div>
+        </div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor-dot"></div>
+    <div class="custom-cursor-ring"></div>
+
+    <!-- Scroll Progress Bar -->
+    <div
+        style="position: fixed; top: 0; left: 0; width: 100%; height: 3px; background: rgba(0,0,0,0.05); z-index: 9999;">
+        <div class="scroll-progress-fill"
+            style="height: 100%; width: 0%; background: var(--color-gold-gradient); transition: width 0.1s ease-out;">
+        </div>
+    </div>
+
+    <!-- SECTION 1: NAVIGATION -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="index.html" class="brand-logo">
+                <div class="logo-circle"><img src="images/logo.png" alt="FutureCity Properties Logo"
+                        class="header-logo-img" /></div>
+                <div class="brand-name">
+                    <span class="brand-name-main">FutureCity</span>
+                    <span class="brand-name-sub">Properties</span>
+                </div>
+            </a>
+
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="projects.html" class="nav-link">Projects & Plots</a>
+                <a href="membership.html" class="nav-link" style="color:var(--color-gold);">Membership</a>
+                <a href="investment.html" class="nav-link">Investment</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="gallery.html" class="nav-link">Gallery</a>
+                <a href="blogs.html" class="nav-link">Insights</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                <a href="member/login.html" class="nav-link"
+                    style="font-size:0.85rem; font-weight:600; text-decoration:none; display:none; display:md-inline-block;">Member
+                    Login</a>
+                <button class="btn btn-gold open-site-visit-modal" style="display: none; display: md-inline-flex;">
+                    <span>Book Site Visit</span>
+                </button>
+                <button class="hamburger-btn" aria-label="Toggle Mobile Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-drawer-overlay"></div>
+    <div class="mobile-drawer">
+        <div class="mobile-nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="projects.html">Projects & Plots</a>
+            <a href="membership.html" style="color:var(--color-gold);">Membership</a>
+            <a href="member/login.html">Member Login</a>
+            <a href="investment.html">Investment</a>
+            <a href="services.html">Services</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="blogs.html">Insights</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <div style="margin-top: 2rem;">
+            <button class="btn btn-gold open-site-visit-modal" style="width: 100%;">Book VIP Visit</button>
+        </div>
+    </div>
+
+    <!-- SECTION 2: LUXURY HERO (WHITE ARCHITECTURE THEME) -->
+    <section class="hero-section"
+        style="position: relative; min-height: 100vh; display: flex; align-items: center; padding-top: 8rem; overflow: hidden; background: radial-gradient(circle at 70% 30%, #F8FAFC 0%, #FFFFFF 70%);">
+
+        <div style="position: absolute; top: 10%; right: 5%; width: 500px; height: 500px; border-radius: 50%; background: radial-gradient(circle, rgba(184, 134, 11, 0.08) 0%, transparent 70%); filter: blur(60px);"
+            data-parallax="15"></div>
+
+        <div class="container">
+            <div class="grid grid-2 align-center gap-lg">
+                <div class="hero-content">
+                    <span class="section-subtitle reveal-up">Prime Plots & Luxury Villa Estates</span>
+                    <h1 class="reveal-up" style="margin-bottom: 1.5rem;">
+                        Invest in <br><span class="text-gold-gradient">Tomorrow's</span> Hyderabad
+                    </h1>
+                    <p class="section-description reveal-up"
+                        style="max-width: 580px; margin-bottom: 2.5rem; font-size: 1.2rem; color: #475569;">
+                        Explore handpicked HMDA & TS-RERA approved open plots, ultra-luxury gated villas, and sky
+                        estates across Neopolis, Kokapet, and Mucherla Future City.
+                    </p>
+
+                    <!-- Property Category Pills Overlay -->
+                    <div class="flex gap-sm flex-wrap reveal-up" style="margin-bottom: 2.5rem;">
+                        <span class="badge badge-plot">🏡 Open Investment Plots</span>
+                        <span class="badge badge-villa">🏰 Gated Villa Estates</span>
+                        <span class="badge badge-gold">🏙️ Sky Villa Penthouses</span>
+                    </div>
+
+                    <div class="hero-buttons flex gap-md reveal-up">
+                        <a href="projects.html" class="btn btn-gold">Explore Asset Catalog</a>
+                        <button class="btn btn-outline open-site-visit-modal">Book Site Consultation</button>
+                    </div>
+                </div>
+
+                <!-- Animated Statistics Card -->
+                <div class="glass-panel reveal-scale"
+                    style="padding: 3rem; background: #FFFFFF; border-color: var(--color-border-gold);"
+                    data-parallax="-10">
+                    <h3
+                        style="font-size: 1.3rem; color: var(--color-gold-dark); margin-bottom: 2rem; border-bottom: 1px solid var(--color-border); padding-bottom: 1rem;">
+                        PORTFOLIO PERFORMANCE 2026
+                    </h3>
+                    <div class="grid grid-2 gap-md">
+                        <div class="stat-box">
+                            <div class="stat-counter font-number"
+                                style="font-size: 2.8rem; font-weight: 700; color: var(--color-heading);"
+                                data-target="3" data-suffix="+">0</div>
+                            <div
+                                style="font-size: 0.85rem; color: var(--color-muted); text-transform: uppercase; letter-spacing: 1px;">
+                                Happy Investors</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="font-number"
+                                style="font-size: 2.8rem; font-weight: 700; color: var(--color-gold-dark);">₹40 L</div>
+                            <div
+                                style="font-size: 0.85rem; color: var(--color-muted); text-transform: uppercase; letter-spacing: 1px;">
+                                Property Asset Value</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-counter font-number"
+                                style="font-size: 2.8rem; font-weight: 700; color: var(--color-heading);"
+                                data-target="98" data-suffix="%">0</div>
+                            <div
+                                style="font-size: 0.85rem; color: var(--color-muted); text-transform: uppercase; letter-spacing: 1px;">
+                                Legal Approval Rate</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="font-number"
+                                style="font-size: 2.8rem; font-weight: 700; color: var(--color-gold-dark);">1.5+</div>
+                            <div
+                                style="font-size: 0.85rem; color: var(--color-muted); text-transform: uppercase; letter-spacing: 1px;">
+                                Years Legacy</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- SECTION 4: WHY FUTURECITY (SIX CARDS) -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Excellence & Security</span>
+                <h2 class="section-title">Why High-Net-Worth Investors Choose Us</h2>
+                <p class="section-description">Institutional grade due diligence for plots, villas, and commercial real
+                    estate assets.</p>
+            </div>
+
+            <div class="grid grid-4 gap-md stagger-parent">
+                <div class="feature-card reveal-child">
+                    <div class="feature-icon-box">🛡️</div>
+                    <h3 style="font-size: 1.3rem; margin-bottom: 0.75rem;">100% Legal Clearance</h3>
+                    <p style="color: var(--color-muted); font-size: 0.95rem;">Rigorous 40-point legal audit covering
+                        HMDA zoning, TS-RERA registrations, and clear link titles.</p>
+                </div>
+                <div class="feature-card reveal-child">
+                    <div class="feature-icon-box">📈</div>
+                    <h3 style="font-size: 1.3rem; margin-bottom: 0.75rem;">Investment Growth Modeling</h3>
+                    <p style="color: var(--color-muted); font-size: 0.95rem;">Macroeconomic modeling to maximize
+                        compound annual appreciation (CAGR) across 3 to 7-year horizons.</p>
+                </div>
+                <div class="feature-card reveal-child">
+                    <div class="feature-icon-box">🏡</div>
+                    <h3 style="font-size: 1.3rem; margin-bottom: 0.75rem;">Direct Developer Desk</h3>
+                    <p style="color: var(--color-muted); font-size: 0.95rem;">Pre-launch allotment access and priority
+                        villa plot selection with top Grade-A builders.</p>
+                </div>
+                <div class="feature-card reveal-child">
+                    <div class="feature-icon-box">🌐</div>
+                    <h3 style="font-size: 1.3rem; margin-bottom: 0.75rem;">Dedicated NRI Advisory</h3>
+                    <p style="color: var(--color-muted); font-size: 0.95rem;">End-to-end remote execution for NRIs
+                        across USA, UAE, UK, and Singapore, including POA and FEMA compliance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5: FEATURED PROPERTIES & PLOTS CAROUSEL -->
+    <section id="featured-properties" class="section"
+        style="background: #F8FAFC; border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border);">
+        <div class="container">
+            <div class="section-header flex justify-between align-center"
+                style="max-width: 100%; text-align: left; margin-bottom: 3rem;">
+                <div>
+                    <span class="section-subtitle">Curated Catalog</span>
+                    <h2 class="section-title"><span class="text-styled-luxury">Luxurious</span> Plots & Villas</h2>
+                </div>
+                <a href="projects.html" class="btn btn-outline" style="display: none; display: md-inline-flex;">View
+                    Full Catalog</a>
+            </div>
+
+            <div class="property-slider property-slider-container reveal-up" style="overflow: hidden;">
+                <div class="slider-track flex" style="gap: 2rem; transition: transform 0.6s var(--ease-luxury);">
+
+                    <!-- Property Card 1: OPEN PLOT -->
+                    <div class="slider-slide" style="min-width: 380px; flex: 0 0 380px;">
+                        <div class="property-card">
+                            <div class="property-img-wrapper">
+                                <img src="images/open_plots_shadnagar.jpg"
+                                    alt="Open Plots Shadnagar Hyderabad - Aerial View">
+                                <div class="property-badge-group">
+                                    <span class="badge badge-plot">Open Plot</span>
+                                    <span class="badge badge-verified">HMDA Approved</span>
+                                </div>
+                                <div class="property-overlay-tag">
+                                    <span>Plot Size: 125 - 1000 Sq. Yds</span>
+                                    <span style="color: #34D399;">+28% YoY</span>
+                                </div>
+                            </div>
+                            <div class="property-content">
+                                <div class="property-location">Shadnagar-Hyderabad</div>
+                                <div class="property-meta-grid" style="margin-top: 1rem;">
+                                    <div class="property-meta-item">
+                                        <div class="property-meta-label">Plot Area</div>
+                                        <div class="property-meta-val">From 125 sq/yrd</div>
+                                    </div>
+                                    <div class="property-meta-item">
+                                        <div class="property-meta-label">Starting Price</div>
+                                        <div class="property-meta-val" style="color: #047857;">₹10,000 / sq/yrd</div>
+                                    </div>
+                                </div>
+                                <div class="property-footer" style="margin-top: 1.5rem;">
+                                    <div class="property-price"
+                                        style="display: flex; flex-direction: column; line-height: 1.2;">
+                                        ₹12.5 L
+                                        <span
+                                            style="font-size: 0.8rem; font-weight: 500; color: var(--color-muted);">Starting
+                                            Value</span>
+                                    </div>
+                                    <a href="true-highlands-details.html" class="btn btn-gold"
+                                        style="padding: 0.5rem 1.2rem; font-size: 0.85rem;">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Property Card 2: LUXURY VILLA -->
+                    <div class="slider-slide" style="min-width: 380px; flex: 0 0 380px;">
+                        <div class="property-card">
+                            <div class="property-img-wrapper">
+                                <img src="https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&w=800&q=80"
+                                    alt="Jayabheri Peak Estates">
+                                <div class="property-badge-group">
+                                    <span class="badge badge-villa">Gatted Community</span>
+                                    <span class="badge badge-gold">East Facing</span>
+                                </div>
+                                <div class="property-overlay-tag">
+                                    <span>Ground + First Floor Villa</span>
+                                    <span style="color: #34D399;">Built 1995</span>
+                                </div>
+                            </div>
+                            <div class="property-content">
+                                <div class="property-location">P#3A, Radhika Colony, West Marredpally</div>
+                                <h3 class="property-title">5 BHK Independent Villa</h3>
+                                <div class="property-meta-grid">
+                                    <div class="property-meta-item">
+                                        <div class="property-meta-label">Config</div>
+                                        <div class="property-meta-val">5 Bed, 4 Bath</div>
+                                    </div>
+                                    <div class="property-meta-item">
+                                        <div class="property-meta-label">Square Footage</div>
+                                        <div class="property-meta-val">2,600 sq ft</div>
+                                    </div>
+                                    <div class="property-meta-item">
+                                        <div class="property-meta-label">Lot Size</div>
+                                        <div class="property-meta-val" style="color: #047857;">245.33 Sq Yrds</div>
+                                    </div>
+                                </div>
+                                <div class="property-footer">
+                                    <div class="property-price">Rs 3.75 Cr</div>
+                                    <a href="project-details.html" class="btn btn-gold"
+                                        style="padding: 0.5rem 1.2rem; font-size: 0.85rem;">View Specs</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Property Card 3: FUTURECITY-HYDERABAD -->
+                    <div class="slider-slide" style="min-width: 380px; flex: 0 0 380px;">
+                        <div class="property-card">
+                            <div class="property-img-wrapper">
+                                <img src="https://i.pinimg.com/736x/75/41/b2/7541b27f9e5100b5fb51d3ae9910469d.jpg"
+                                    alt="FutureCity-Hyderabad">
+                                <div class="property-badge-group">
+                                    <span class="badge badge-plot">Open Plot</span>
+                                    <span class="badge badge-verified">HMDA Approved</span>
+                                </div>
+                                <div class="property-overlay-tag">
+                                    <span>Plot Size: 125 - 1000 Sq. Yds</span>
+                                    <span style="color: #34D399;">+28% YoY</span>
+                                </div>
+                            </div>
+                            <div class="property-content">
+                                <div class="property-location">FutureCity-Hyderabad</div>
+                                <div class="property-meta-grid" style="margin-top: 1rem;">
+                                    <div class="property-meta-item">
+                                        <div class="property-meta-label">Plot Area</div>
+                                        <div class="property-meta-val">From 125 sq/yrd</div>
+                                    </div>
+                                    <div class="property-meta-item">
+                                        <div class="property-meta-label">Starting Price</div>
+                                        <div class="property-meta-val" style="color: #047857;">₹10,000 / sq/yrd</div>
+                                    </div>
+                                </div>
+                                <div class="property-footer" style="margin-top: 1.5rem;">
+                                    <div class="property-price"
+                                        style="display: flex; flex-direction: column; line-height: 1.2;">
+                                        ₹12.5 L
+                                        <span
+                                            style="font-size: 0.8rem; font-weight: 500; color: var(--color-muted);">Starting
+                                            Value</span>
+                                    </div>
+                                    <a href="future-city-details.html" class="btn btn-gold"
+                                        style="padding: 0.5rem 1.2rem; font-size: 0.85rem;">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Property Card 4: TRUE PRESTIGE COMMERCIAL -->
+                    <div class="slider-slide" style="min-width: 380px; flex: 0 0 380px;">
+                        <div class="property-card">
+                            <div class="property-img-wrapper">
+                                <img src="https://i.pinimg.com/736x/13/1c/2f/131c2fcc209c5494a695b5ef67fdf647.jpg"
+                                    alt="True Prestige Commercial">
+                                <div class="property-badge-group">
+                                    <span class="badge badge-plot">Villa Plots</span>
+                                    <span class="badge badge-verified">DTCP- RERA APPROVED</span>
+                                </div>
+                                <div class="property-overlay-tag">
+                                    <span>Plot Size: 125 - 1000 Sq. Yds</span>
+                                    <span style="color: #34D399;">+32% YoY</span>
+                                </div>
+                            </div>
+                            <div class="property-content">
+                                <div class="property-location">Yadagirigutta - East Hyderabad</div>
+                                <h3 class="property-title" style="margin-top:0.3rem;">True Prestige Commercial</h3>
+                                <div class="property-meta-grid" style="margin-top: 1rem;">
+                                    <div class="property-meta-item">
+                                        <div class="property-meta-label">Plot Area</div>
+                                        <div class="property-meta-val">From 125 sq/yrd</div>
+                                    </div>
+                                    <div class="property-meta-item">
+                                        <div class="property-meta-label">Starting Price</div>
+                                        <div class="property-meta-val" style="color: #047857;">₹9,999 / sq/yrd</div>
+                                    </div>
+                                </div>
+                                <div class="property-footer" style="margin-top: 1.5rem;">
+                                    <div class="property-price"
+                                        style="display: flex; flex-direction: column; line-height: 1.2;">
+                                        ₹12.5 L
+                                        <span
+                                            style="font-size: 0.8rem; font-weight: 500; color: var(--color-muted);">Starting
+                                            Value</span>
+                                    </div>
+                                    <a href="true-prestige-commercial-details.html" class="btn btn-gold"
+                                        style="padding: 0.5rem 1.2rem; font-size: 0.85rem;">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="flex justify-center align-center gap-md" style="margin-top: 2.5rem;">
+                    <button class="slider-prev btn btn-glass"
+                        style="width: 48px; height: 48px; border-radius: 50%; padding: 0;">←</button>
+                    <div class="slider-dots flex gap-xs"></div>
+                    <button class="slider-next btn btn-glass"
+                        style="width: 48px; height: 48px; border-radius: 50%; padding: 0;">→</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 6: INTERACTIVE HYDERABAD GROWTH MAP -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Growth Engine 2026</span>
+                <h2 class="section-title">Interactive Hyderabad Plot & Villa Map</h2>
+                <p class="section-description">Hover or click location nodes to inspect average plot land rates and
+                    villa appreciation stats.</p>
+            </div>
+
+            <div class="map-interactive-container reveal-scale">
+                <svg class="map-svg-grid" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+                            <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(15, 23, 42, 0.08)" stroke-width="1" />
+                        </pattern>
+                    </defs>
+                    <rect width="100%" height="100%" fill="url(#grid)" />
+                </svg>
+
+                <!-- Map Nodes -->
+                <div class="map-node active" style="top: 35%; left: 25%;">
+                    <div class="map-node-dot"></div>
+                    <div class="map-node-label">Neopolis, Kokapet</div>
+                    <div class="map-node-card">
+                        <div style="font-weight: 700; color: var(--color-gold-dark); margin-bottom: 0.25rem;">Neopolis
+                            Kokapet</div>
+                        <div style="font-size: 0.85rem; color: var(--color-heading); margin-bottom: 0.5rem;">Land Avg:
+                            ₹1.25 Lakh / Sq.Yd</div>
+                        <div style="font-size: 0.8rem; color: #047857; font-weight: 700;">+24.5% YoY Growth</div>
+                    </div>
+                </div>
+
+                <div class="map-node" style="top: 48%; left: 45%;">
+                    <div class="map-node-dot"></div>
+                    <div class="map-node-label">Financial District</div>
+                    <div class="map-node-card">
+                        <div style="font-weight: 700; color: var(--color-gold-dark); margin-bottom: 0.25rem;">Financial
+                            District</div>
+                        <div style="font-size: 0.85rem; color: var(--color-heading); margin-bottom: 0.5rem;">Sky Villas:
+                            ₹16,000 / SFT</div>
+                        <div style="font-size: 0.8rem; color: #047857; font-weight: 700;">+19.2% YoY Growth</div>
+                    </div>
+                </div>
+
+                <div class="map-node" style="top: 75%; left: 70%;">
+                    <div class="map-node-dot"></div>
+                    <div class="map-node-label">Future City Hub (Mucherla)</div>
+                    <div class="map-node-card">
+                        <div style="font-weight: 700; color: var(--color-gold-dark); margin-bottom: 0.25rem;">Mucherla
+                            Future City</div>
+                        <div style="font-size: 0.85rem; color: var(--color-heading); margin-bottom: 0.5rem;">Plot Hub:
+                            ₹35,000 / Sq.Yd</div>
+                        <div style="font-size: 0.8rem; color: #047857; font-weight: 700;">+35.0% Expected CAGR</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 7: ROI CALCULATOR -->
+    <section class="section">
+        <div class="container">
+            <div class="grid grid-2 gap-lg align-center">
+                <div class="reveal-left">
+                    <span class="section-subtitle">Financial Intelligence</span>
+                    <h2 class="section-title">Calculate Plot & Villa Appreciation</h2>
+                    <p style="color: var(--color-muted); margin-bottom: 2rem;">Simulate real estate appreciation in
+                        Hyderabad's prime plot and villa corridors.</p>
+
+                    <div class="calculator-box">
+                        <div class="calc-range-group">
+                            <div class="calc-range-header">
+                                <span class="calc-range-label">Investment Principal</span>
+                                <span id="calcAmountVal" class="calc-range-val">₹1.00 Cr</span>
+                            </div>
+                            <input type="range" id="calcAmount" min="50" max="2000" step="25" value="100"
+                                class="calc-range-input">
+                        </div>
+
+                        <div class="calc-range-group">
+                            <div class="calc-range-header">
+                                <span class="calc-range-label">Holding Horizon</span>
+                                <span id="calcYearsVal" class="calc-range-val">5 Years</span>
+                            </div>
+                            <input type="range" id="calcYears" min="1" max="15" step="1" value="5"
+                                class="calc-range-input">
+                        </div>
+
+                        <div class="calc-range-group">
+                            <div class="calc-range-header">
+                                <span class="calc-range-label">Expected Annual Growth</span>
+                                <span id="calcGrowthVal" class="calc-range-val">15% p.a.</span>
+                            </div>
+                            <input type="range" id="calcGrowth" min="8" max="25" step="1" value="15"
+                                class="calc-range-input">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reveal-right">
+                    <div class="calc-result-grid">
+                        <div>
+                            <div style="font-size: 0.8rem; text-transform: uppercase; color: var(--color-muted);">
+                                Projected Asset Value</div>
+                            <div id="resFutureVal" class="font-number"
+                                style="font-size: 2rem; font-weight: 700; color: var(--color-gold-dark); margin-top: 0.5rem;">
+                                ₹2.01 Cr</div>
+                        </div>
+                        <div>
+                            <div style="font-size: 0.8rem; text-transform: uppercase; color: var(--color-muted);">Net
+                                Capital Gain</div>
+                            <div id="resProfitVal" class="font-number"
+                                style="font-size: 2rem; font-weight: 700; color: #047857; margin-top: 0.5rem;">+₹1.01 Cr
+                            </div>
+                        </div>
+                        <div>
+                            <div style="font-size: 0.8rem; text-transform: uppercase; color: var(--color-muted);">Total
+                                Yield ROI</div>
+                            <div id="resROIVal" class="font-number"
+                                style="font-size: 2rem; font-weight: 700; color: var(--color-heading); margin-top: 0.5rem;">
+                                +101.1%</div>
+                        </div>
+                    </div>
+
+                    <!-- Visual Chart Representation -->
+                    <div
+                        style="margin-top: 2rem; padding: 1.5rem; background: #FFFFFF; border-radius: var(--radius-md); border: 1px solid var(--color-border); box-shadow: var(--shadow-subtle);">
+                        <div
+                            style="display: flex; justify-content: space-between; font-size: 0.85rem; margin-bottom: 0.75rem; font-weight: 600;">
+                            <span>Principal Investment</span>
+                            <span style="color: var(--color-gold-dark);">Capital Appreciation</span>
+                        </div>
+                        <div
+                            style="height: 12px; width: 100%; background: #E2E8F0; border-radius: var(--radius-full); overflow: hidden; display: flex;">
+                            <div id="chartBarPrincipal"
+                                style="width: 50%; height: 100%; background: #0B1320; transition: width 0.4s;"></div>
+                            <div id="chartBarProfit"
+                                style="width: 50%; height: 100%; background: var(--color-gold-gradient); transition: width 0.4s;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 8: BUILDER PARTNERS -->
+    <section class="section"
+        style="padding: 3rem 0; background: #F8FAFC; border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border);">
+        <div class="container-fluid">
+            <div class="marquee-wrapper">
+                <div class="marquee-content">
+                    <div class="marquee-item">PRESTIGE GROUP</div>
+                    <div class="marquee-item">MY HOME CONSTRUCTIONS</div>
+                    <div class="marquee-item">APARNA CONSTRUCTIONS</div>
+                    <div class="marquee-item">JAYABHERI PROPERTIES</div>
+                    <div class="marquee-item">LANSUM PROPERTIES</div>
+                    <div class="marquee-item">DSR BUILDERS</div>
+                    <div class="marquee-item">RAJAPUSHPA PROPERTIES</div>
+                    <!-- Duplicate for infinite smooth loop -->
+                    <div class="marquee-item">PRESTIGE GROUP</div>
+                    <div class="marquee-item">MY HOME CONSTRUCTIONS</div>
+                    <div class="marquee-item">APARNA CONSTRUCTIONS</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 9: FAQ ACCORDION -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Clear Answers</span>
+                <h2 class="section-title">Frequently Asked Questions</h2>
+            </div>
+
+            <div style="max-width: 800px; margin: 0 auto;">
+                <div class="accordion-item active">
+                    <button class="accordion-header">
+                        <span>Are open plot layouts HMDA & TS-RERA approved?</span>
+                        <div class="accordion-icon">↓</div>
+                    </button>
+                    <div class="accordion-body">
+                        <p>Yes. 100% of plot layouts and villa projects marketed by FutureCity Properties carry clear
+                            HMDA layout sanctions, TS-RERA registration, and 30-year encumbrance clearance certificates.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <span>What is the expected capital growth for Mucherla Future City plots?</span>
+                        <div class="accordion-icon">↓</div>
+                    </button>
+                    <div class="accordion-body">
+                        <p>Driven by the 30,000-acre AI University Hub, Net-Zero Smart Infrastructure, and direct ORR
+                            extensions, Mucherla plots have demonstrated 25% to 35% annual capital appreciation.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 10: CONTACT FORM -->
+    <section class="section" style="background: #F8FAFC;">
+        <div class="container">
+            <div class="grid grid-2 gap-lg">
+                <div class="reveal-left">
+                    <span class="section-subtitle">VIP Concierge</span>
+                    <h2 class="section-title" style="margin-bottom: 1.5rem;">Schedule Your Private Site Visit</h2>
+                    <p style="color: var(--color-muted); margin-bottom: 2rem;">Connect with our Senior Directors for
+                        private plot layout inspections and villa walkthroughs.</p>
+
+                    <div style="display: flex; flex-direction: column; gap: 1.25rem;">
+                        <div style="display: flex; align-items: center; gap: 1rem;">
+                            <div class="feature-icon-box" style="width: 44px; height: 44px; margin: 0;">📍</div>
+                            <div>
+                                <div style="font-weight: 700; color: var(--color-heading);">Corporate Headquarters</div>
+                                <div style="font-size: 0.9rem; color: var(--color-muted);">Level 18, FutureCity Towers,
+                                    Financial District, Hyderabad, 500032</div>
+                            </div>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 1rem;">
+                            <div class="feature-icon-box" style="width: 44px; height: 44px; margin: 0;">📞</div>
+                            <div>
+                                <div style="font-weight: 700; color: var(--color-heading);">Direct Hotline</div>
+                                <div style="font-size: 0.9rem; color: var(--color-gold-dark); font-weight: 700;">+91
+                                    9121195598 / +91 7660858895</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-panel reveal-right"
+                    style="padding: 2.5rem; background: #FFFFFF; border-color: var(--color-border-gold);">
+                    <form id="contactForm">
+                        <div style="margin-bottom: 1.25rem;">
+                            <label
+                                style="font-size: 0.85rem; color: var(--color-heading); font-weight: 600; display: block; margin-bottom: 0.4rem;">Full
+                                Name *</label>
+                            <input type="text" name="name" required placeholder="e.g. Vikramaditya Verma"
+                                class="glass-input">
+                        </div>
+                        <div style="margin-bottom: 1.25rem;">
+                            <label
+                                style="font-size: 0.85rem; color: var(--color-heading); font-weight: 600; display: block; margin-bottom: 0.4rem;">Mobile
+                                / WhatsApp *</label>
+                            <input type="tel" name="phone" required placeholder="+91 98765 43210" class="glass-input">
+                        </div>
+                        <div style="margin-bottom: 1.25rem;">
+                            <label
+                                style="font-size: 0.85rem; color: var(--color-heading); font-weight: 600; display: block; margin-bottom: 0.4rem;">Interested
+                                Asset Type</label>
+                            <select class="glass-input">
+                                <option>Open Investment Plots</option>
+                                <option>Gated Villa Estates</option>
+                                <option>Sky Villa Penthouse</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-gold" style="width: 100%;">Schedule Site Visit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 11: PREMIUM FOOTER -->
+        <footer class="footer">
+        <div class="container">
+            <div class="grid grid-4 gap-lg">
+                <div>
+                    <a href="index.html" class="brand-logo footer-brand">
+                        <div class="logo-circle"><img src="images/logo.png" alt="FutureCity Properties"
+                                class="header-logo-img" /></div>
+                    </a>
+                    <p class="footer-description">Hyderabad’s premier luxury real estate advisory firm specializing in
+                        verified open plots, villa estates, and sky residences.</p>
+                </div>
+
+                <div>
+                    <h4 class="footer-heading">Navigation</h4>
+                    <div class="footer-links">
+                        <a href="about.html">About FutureCity</a>
+                        <a href="projects.html">Projects & Plots</a>
+                        <a href="membership.html">Membership</a>
+                        <a href="member/login.html">Member Portal</a>
+                        <a href="investment.html">Investment Guide</a>
+                        <a href="services.html">Our Services</a>
+                        <a href="contact.html">Contact Advisory</a>
+                        <a href="admin/login.html" style="color:rgba(255,255,255,0.2);">Admin Access</a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="footer-heading">Corridors</h4>
+                    <div class="footer-links">
+                        <a href="projects.html">Mucherla Future City Plots</a>
+                        <a href="projects.html">Kokapet Villa Estates</a>
+                        <a href="projects.html">Neopolis Sky Villas</a>
+                        <a href="projects.html">Financial District Hub</a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="footer-heading">Private Insights</h4>
+                    <p style="font-size: 0.85rem; color: #94A3B8;">Receive confidential pre-launch price sheets and plot
+                        layout maps.</p>
+                    <form id="newsletterForm" class="footer-newsletter-form">
+                        <input type="email" placeholder="Your Email..." required class="glass-input"
+                            style="font-size: 0.85rem; padding: 0.6rem 1rem;">
+                        <button type="submit" class="btn btn-gold" style="padding: 0.6rem 1rem;">Join</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div>&copy; 2026 FutureCity Properties Pvt. Ltd. All rights reserved. TS-RERA Regd. Real Estate Agent.
+                </div>
+                <div class="flex gap-md">
+                    <a href="privacy.html" style="color: #94A3B8;">Privacy Policy</a>
+                    <a href="terms.html" style="color: #94A3B8;">Terms & Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- FLOATING ACTIONS -->
+    <div class="floating-actions">
+        <a href="https://chat.whatsapp.com/Fj9gY3gaUTVHniNFPFgvWS?s=cl&p=a&ilr=1" target="_blank"
+            class="float-btn float-whatsapp" aria-label="WhatsApp Us">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="52" height="52" style="display:block;">
+                <path fill="#fff"
+                    d="M4.868,43.303l2.694-9.835C5.9,30.59,5.026,27.324,5.027,23.979C5.032,13.514,13.548,5,24.014,5c5.079,0.002,9.845,1.979,13.43,5.566c3.584,3.588,5.558,8.356,5.556,13.428c-0.004,10.465-8.522,18.98-18.986,18.98c-0.001,0,0,0,0,0h-0.008c-3.177-0.001-6.3-0.798-9.073-2.311L4.868,43.303z" />
+                <path fill="#fff"
+                    d="M4.868,43.803c-0.132,0-0.26-0.052-0.355-0.148c-0.125-0.127-0.174-0.312-0.127-0.483l2.639-9.636c-1.636-2.906-2.499-6.206-2.497-9.556C4.532,13.238,13.273,4.5,24.014,4.5c5.21,0.002,10.105,2.031,13.784,5.713c3.679,3.683,5.704,8.577,5.702,13.781c-0.004,10.741-8.746,19.48-19.486,19.48c-3.189-0.001-6.344-0.788-9.144-2.277l-9.875,2.589C4.953,43.798,4.911,43.803,4.868,43.803z" />
+                <path fill="#cfd8dc"
+                    d="M24.014,5c5.079,0.002,9.845,1.979,13.43,5.566c3.584,3.588,5.558,8.356,5.556,13.428c-0.004,10.465-8.522,18.98-18.986,18.98h-0.008c-3.177-0.001-6.3-0.798-9.073-2.311L4.868,43.303l2.694-9.835C5.9,30.59,5.026,27.324,5.027,23.979C5.032,13.514,13.548,5,24.014,5 M24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974" />
+                <path fill="#40c351"
+                    d="M35.176,12.832c-2.98-2.982-6.941-4.625-11.157-4.626c-8.704,0-15.783,7.076-15.787,15.774c-0.001,2.981,0.833,5.883,2.413,8.396l0.376,0.597l-1.595,5.821l5.973-1.566l0.577,0.342c2.422,1.438,5.2,2.198,8.032,2.199h0.006c8.698,0,15.777-7.077,15.78-15.776C39.795,19.778,38.156,15.814,35.176,12.832z" />
+                <path fill="#fff" fill-rule="evenodd"
+                    d="M19.268,16.045c-0.355-0.79-0.729-0.806-1.068-0.82c-0.277-0.012-0.593-0.011-0.909-0.011c-0.316,0-0.83,0.119-1.265,0.594c-0.435,0.475-1.661,1.622-1.661,3.956c0,2.334,1.7,4.59,1.937,4.906c0.237,0.316,3.282,5.259,8.104,7.161c4.007,1.58,4.823,1.266,5.693,1.187c0.87-0.079,2.807-1.147,3.202-2.255c0.395-1.108,0.395-2.057,0.277-2.255c-0.119-0.198-0.435-0.316-0.909-0.554s-2.807-1.385-3.242-1.543c-0.435-0.158-0.751-0.237-1.068,0.238c-0.316,0.474-1.225,1.543-1.502,1.859c-0.277,0.317-0.554,0.357-1.028,0.119c-0.474-0.238-2.002-0.738-3.815-2.354c-1.41-1.257-2.362-2.81-2.639-3.285c-0.277-0.474-0.03-0.731,0.208-0.968c0.213-0.213,0.474-0.554,0.712-0.831c0.237-0.277,0.316-0.475,0.474-0.791c0.158-0.317,0.079-0.594-0.04-0.831C20.612,19.329,19.69,16.983,19.268,16.045z"
+                    clip-rule="evenodd" />
+            </svg>
+        </a>
+        <a href="tel:7660858895" class="float-btn float-call" aria-label="Call Direct">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                    d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.11-.27c1.12.45 2.33.69 3.58.69a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.24 2.46.69 3.58a1 1 0 01-.27 1.11l-2.2 2.2z" />
+            </svg>
+        </a>
+        <button class="float-btn back-to-top" aria-label="Back to Top">↑</button>
+    </div>
+
+    <!-- SITE VISIT MODAL -->
+    <div id="siteVisitModal" class="modal-overlay">
+        <div class="modal-container">
+            <button class="modal-close">&times;</button>
+            <h3 style="font-size: 1.8rem; margin-bottom: 0.5rem; color: var(--color-heading);">Book VIP Site Visit</h3>
+            <p style="font-size: 0.9rem; color: var(--color-muted); margin-bottom: 1.5rem;">Complimentary luxury vehicle
+                pickup & private plot layout inspection.</p>
+            <form id="siteVisitForm">
+                <div style="margin-bottom: 1rem;">
+                    <label
+                        style="font-size: 0.8rem; color: var(--color-heading); font-weight: 600; display: block; margin-bottom: 0.3rem;">Full
+                        Name *</label>
+                    <input type="text" name="name" required placeholder="Enter your full name" class="glass-input">
+                </div>
+                <div style="margin-bottom: 1rem;">
+                    <label
+                        style="font-size: 0.8rem; color: var(--color-heading); font-weight: 600; display: block; margin-bottom: 0.3rem;">Phone
+                        / WhatsApp *</label>
+                    <input type="tel" name="phone" required placeholder="+91 98765 43210" class="glass-input">
+                </div>
+                <div style="margin-bottom: 1rem;">
+                    <label
+                        style="font-size: 0.8rem; color: var(--color-heading); font-weight: 600; display: block; margin-bottom: 0.3rem;">Preferred
+                        Property / Corridor</label>
+                    <select class="glass-input">
+                        <option>Future City Plot Corridor (Mucherla)</option>
+                        <option>West Marredpally Villa</option>
+                        <option>The Crown Neopolis Sky Villas</option>
+                    </select>
+                </div>
+                <div style="margin-bottom: 1.5rem;">
+                    <label
+                        style="font-size: 0.8rem; color: var(--color-heading); font-weight: 600; display: block; margin-bottom: 0.3rem;">Preferred
+                        Date</label>
+                    <input type="date" class="glass-input">
+                </div>
+                <button type="submit" class="btn btn-gold" style="width: 100%;">Confirm VIP Reservation</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/cursor.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/scroll.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/counter.js"></script>
+    <script src="js/slider.js"></script>
+    <script src="js/calculator.js"></script>
+    <script src="js/forms.js"></script>
+    <script src="js/main.js"></script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "WebSite",
+                "name": "FutureCity Properties",
+                "url": "https://futurecityproperties.com/",
+                "description": "Explore verified residential plots, villas, apartments and investment opportunities in Hyderabad with FutureCity Properties. HMDA & TS-RERA approved open plots, luxury gated villas, and sky estates ac",
+                "publisher": {
+                    "@type": "Organization",
+                    "name": "FutureCity Properties",
+                    "url": "https://futurecityproperties.com/",
+                    "logo": {
+                        "@type": "ImageObject",
+                        "url": "https://futurecityproperties.com/images/logo.png"
+                    }
+                }
+            },
+            {
+                "@type": "Organization",
+                "name": "FutureCity Properties",
+                "alternateName": "FutureCity Properties Pvt. Ltd.",
+                "url": "https://futurecityproperties.com/",
+                "logo": "https://futurecityproperties.com/images/logo.png",
+                "description": "Hyderabad's premier real estate advisory firm specializing in verified open plots, villa estates, and sky residences.",
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "Hyderabad",
+                    "addressRegion": "Telangana",
+                    "addressCountry": "IN"
+                },
+                "sameAs": []
+            }
+        ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "WebSite",
+                "name": "FutureCity Properties",
+                "url": "https://futurecityproperties.com/",
+                "description": "Explore verified residential plots, villas, apartments and investment opportunities in Hyderabad with FutureCity Properties. HMDA & TS-RERA approved open plots, luxury gated villas, and sky estates ac",
+                "publisher": {
+                    "@type": "Organization",
+                    "name": "FutureCity Properties",
+                    "url": "https://futurecityproperties.com/",
+                    "logo": {
+                        "@type": "ImageObject",
+                        "url": "https://futurecityproperties.com/images/logo.png"
+                    }
+                }
+            },
+            {
+                "@type": "Organization",
+                "name": "FutureCity Properties",
+                "alternateName": "FutureCity Properties Pvt. Ltd.",
+                "url": "https://futurecityproperties.com/",
+                "logo": "https://futurecityproperties.com/images/logo.png",
+                "description": "Hyderabad's premier real estate advisory firm specializing in verified open plots, villa estates, and sky residences.",
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "Hyderabad",
+                    "addressRegion": "Telangana",
+                    "addressCountry": "IN"
+                },
+                "sameAs": []
+            }
+        ]
+    }
+    </script>
+</body>
+
+</html>

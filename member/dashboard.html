@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Member Dashboard | FutureCity Properties</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/member.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/qrcodegen@1.8.0/qrcodegen.js"></script>
+
+    <!-- SEO Meta -->
+    <meta name="robots" content="noindex, nofollow">
+</head>
+<body class="member-page">
+
+    <!-- Topbar -->
+    <div class="member-topbar">
+        <div class="container member-topbar-inner">
+            <a href="../index.html" class="member-topbar-brand">
+                <img src="../images/logo.png" alt="Logo" class="member-topbar-logo" onerror="this.src='https://placehold.co/36?text=FC'">
+                <div>
+                    <div class="member-topbar-title">FutureCity Properties</div>
+                    <div class="member-topbar-subtitle">Member Portal</div>
+                </div>
+            </a>
+            <div class="member-topbar-actions">
+                <div class="member-avatar" title="My Profile" id="mem-avatar">M</div>
+                <a href="#" id="fcp-logout-btn" style="color:rgba(255,255,255,0.6); font-size:0.8rem; text-decoration:none; margin-left:1rem;">Logout</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dashboard Content -->
+    <div class="member-body">
+        <div class="container">
+            
+            <!-- Welcome Banner -->
+            <div class="member-welcome-banner">
+                <div>
+                    <div class="member-welcome-title">Welcome back, <span id="mem-welcome-name">Member</span>!</div>
+                    <div class="member-welcome-sub">Manage your membership, view exclusive offers, and access your digital ID.</div>
+                    <div id="mem-status-container"></div>
+                </div>
+            </div>
+
+            <!-- Dashboard Grid -->
+            <div style="display:grid; grid-template-columns:1fr; gap:2rem;">
+                
+                <!-- Left Column: Info & Actions -->
+                <div>
+                    <!-- Info Cards -->
+                    <div class="member-cards-grid">
+                        <div class="member-info-card">
+                            <div class="member-info-card-label">Membership Number</div>
+                            <div class="member-info-card-value" id="mem-info-number">Loading...</div>
+                        </div>
+                        <div class="member-info-card">
+                            <div class="member-info-card-label">Member Since</div>
+                            <div class="member-info-card-value" id="mem-info-since">...</div>
+                        </div>
+                        <div class="member-info-card">
+                            <div class="member-info-card-label">Registered Email</div>
+                            <div class="member-info-card-value" style="font-family:var(--font-body); font-size:0.95rem; font-weight:600;" id="mem-info-email">...</div>
+                        </div>
+                        <div class="member-info-card">
+                            <div class="member-info-card-label">Registered Mobile</div>
+                            <div class="member-info-card-value" style="font-family:var(--font-body); font-size:0.95rem; font-weight:600;" id="mem-info-phone">...</div>
+                        </div>
+                    </div>
+
+                    <!-- Quick Actions -->
+                    <h3 style="font-size:1.1rem; margin-bottom:1rem; color:var(--color-heading);">Quick Actions</h3>
+                    <div class="quick-actions-grid">
+                        <a href="#" class="quick-action-btn">
+                            <div class="quick-action-icon">🏢</div>
+                            <div class="quick-action-label">My Properties</div>
+                        </a>
+                        <a href="#" class="quick-action-btn">
+                            <div class="quick-action-icon">📄</div>
+                            <div class="quick-action-label">Documents</div>
+                        </a>
+                        <a href="#" class="quick-action-btn">
+                            <div class="quick-action-icon">🎁</div>
+                            <div class="quick-action-label">Exclusive Offers</div>
+                        </a>
+                        <a href="#" class="quick-action-btn">
+                            <div class="quick-action-icon">💬</div>
+                            <div class="quick-action-label">Support</div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Column: Digital ID -->
+                <div>
+                    <div class="id-card-section" id="digital-card-wrap">
+                        <div class="id-card-section-title">
+                            <span style="color:var(--color-gold);">✦</span> Digital Membership Card
+                        </div>
+                        
+                        <div class="id-card-wrapper">
+                            <!-- THE CARD -->
+                            <div class="digital-id-card">
+                                <div class="card-header-row">
+                                    <div class="card-logo-group">
+                                        <img src="../images/logo.png" alt="FC" class="card-logo-img" onerror="this.src='https://placehold.co/28?text=FC'">
+                                        <div class="card-brand">FUTURECITY<br>PROPERTIES</div>
+                                    </div>
+                                    <div class="card-label">MEMBERSHIP ID</div>
+                                </div>
+                                
+                                <div class="card-body-row">
+                                    <!-- Using placeholder for privacy by default unless member uploads photo -->
+                                    <div class="card-photo-placeholder">👤</div>
+                                    <div class="card-member-info">
+                                        <div class="card-member-type" id="card-val-type">MEMBER</div>
+                                        <div class="card-member-name" id="card-val-name">JOHN DOE</div>
+                                        <div class="card-membership-number">ID: <span class="card-number-value" id="card-val-number">FCP-MEM-XXXX</span></div>
+                                    </div>
+                                </div>
+                                
+                                <div class="card-footer-row">
+                                    <div class="card-since">Member Since <strong id="card-val-since">Jan 2024</strong></div>
+                                    <div style="display:flex; gap:1rem; align-items:flex-end;">
+                                        <div class="card-signature-area">
+                                            <div class="card-signature-line">Auth. Signature</div>
+                                        </div>
+                                        <div class="card-qr-area">
+                                            <canvas id="card-qr" width="40" height="40"></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- ACTIONS -->
+                            <div class="card-actions">
+                                <p style="font-size:0.8rem; color:var(--color-muted); line-height:1.5;">
+                                    Present this digital ID at FutureCity events or site visits for priority access and exclusive member benefits.
+                                </p>
+                                <button class="card-action-btn" style="background:var(--color-gold); color:#fff;" onclick="window.print()">
+                                    Print ID Card
+                                </button>
+                                <a href="mailto:support@futurecityproperties.com" class="card-action-btn" style="background:#F1F5F9; color:var(--color-heading); border:1px solid var(--color-border);">
+                                    Request Physical Card
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="../js/auth.js"></script>
+    <script src="../js/ui.js"></script>
+    <script src="../js/member.js"></script>
+    <footer class="footer">
+        <div class="container">
+            <div class="grid grid-4 gap-lg">
+                <div>
+                    <a href="../index.html" class="brand-logo footer-brand">
+                        <div class="logo-circle"><img src="../images/logo.png" alt="FutureCity Properties"
+                                class="header-logo-img" /></div>
+                    </a>
+                    <p class="footer-description">Hyderabad’s premier luxury real estate advisory firm specializing in
+                        verified open plots, villa estates, and sky residences.</p>
+                </div>
+
+                <div>
+                    <h4 class="footer-heading">Navigation</h4>
+                    <div class="footer-links">
+                        <a href="../about.html">About FutureCity</a>
+                        <a href="../projects.html">Projects & Plots</a>
+                        <a href="../membership.html">Membership</a>
+                        <a href="../member/login.html">Member Portal</a>
+                        <a href="../investment.html">Investment Guide</a>
+                        <a href="../services.html">Our Services</a>
+                        <a href="../contact.html">Contact Advisory</a>
+                        <a href="../admin/login.html" style="color:rgba(255,255,255,0.2);">Admin Access</a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="footer-heading">Corridors</h4>
+                    <div class="footer-links">
+                        <a href="../projects.html">Mucherla Future City Plots</a>
+                        <a href="../projects.html">Kokapet Villa Estates</a>
+                        <a href="../projects.html">Neopolis Sky Villas</a>
+                        <a href="../projects.html">Financial District Hub</a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="footer-heading">Private Insights</h4>
+                    <p style="font-size: 0.85rem; color: #94A3B8;">Receive confidential pre-launch price sheets and plot
+                        layout maps.</p>
+                    <form id="newsletterForm" class="footer-newsletter-form">
+                        <input type="email" placeholder="Your Email..." required class="glass-input"
+                            style="font-size: 0.85rem; padding: 0.6rem 1rem;">
+                        <button type="submit" class="btn btn-gold" style="padding: 0.6rem 1rem;">Join</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div>&copy; 2026 FutureCity Properties Pvt. Ltd. All rights reserved. TS-RERA Regd. Real Estate Agent.
+                </div>
+                <div class="flex gap-md">
+                    <a href="../privacy.html" style="color: #94A3B8;">Privacy Policy</a>
+                    <a href="../terms.html" style="color: #94A3B8;">Terms & Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,666 @@
+/* ============================================================
+   FUTURECITY PROPERTIES — MEMBERSHIP CSS
+   Styles for membership.html, verify.html, and registration
+   ============================================================ */
+
+/* ── Membership Hero ── */
+.membership-hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, #0B1320 0%, #0f1c30 60%, #0B1320 100%);
+    overflow: hidden;
+    padding: 9rem 0 6rem;
+}
+
+.membership-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 80% 60% at 50% 30%, rgba(184,134,11,0.08) 0%, transparent 70%);
+}
+
+.membership-hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.membership-hero-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(184,134,11,0.12);
+    border: 1px solid rgba(184,134,11,0.3);
+    color: var(--color-gold);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 0.4rem 1rem;
+    border-radius: 99px;
+    margin-bottom: 1.5rem;
+}
+
+.membership-hero-title {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-family: var(--font-heading);
+    color: #fff;
+    line-height: 1.1;
+    margin-bottom: 1.25rem;
+}
+
+.membership-hero-desc {
+    font-size: 1.05rem;
+    color: rgba(255,255,255,0.65);
+    line-height: 1.7;
+    margin-bottom: 2.5rem;
+    max-width: 480px;
+}
+
+.membership-hero-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+/* Floating card in hero */
+.membership-hero-card {
+    background: rgba(255,255,255,0.04);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(184,134,11,0.25);
+    border-radius: 1.5rem;
+    padding: 2.5rem;
+}
+
+.member-stat-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+    margin-bottom: 1.5rem;
+}
+
+.member-stat-box {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 0.875rem;
+    padding: 1.25rem;
+    text-align: center;
+}
+
+.member-stat-value {
+    font-family: var(--font-number);
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-gold-light);
+    line-height: 1;
+    margin-bottom: 0.25rem;
+}
+
+.member-stat-label {
+    font-size: 0.72rem;
+    color: rgba(255,255,255,0.5);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+/* ── Benefits Section ── */
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.benefit-card {
+    background: #fff;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    transition: all 0.35s var(--ease-luxury);
+    position: relative;
+    overflow: hidden;
+}
+
+.benefit-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: var(--color-gold-gradient);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(184,134,11,0.12);
+    border-color: var(--color-border-gold);
+}
+
+.benefit-card:hover::before { opacity: 1; }
+
+.benefit-icon {
+    width: 52px; height: 52px;
+    background: linear-gradient(135deg, rgba(184,134,11,0.1), rgba(184,134,11,0.05));
+    border: 1px solid rgba(184,134,11,0.2);
+    border-radius: 14px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.5rem;
+    margin-bottom: 1.25rem;
+}
+
+.benefit-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--color-heading);
+    margin-bottom: 0.5rem;
+}
+
+.benefit-desc {
+    font-size: 0.875rem;
+    color: var(--color-muted);
+    line-height: 1.6;
+}
+
+/* ── How It Works ── */
+.how-it-works-steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    position: relative;
+}
+
+.how-it-works-steps::before {
+    content: '';
+    position: absolute;
+    top: 2rem;
+    left: 12.5%;
+    right: 12.5%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--color-gold), transparent);
+}
+
+.step-item {
+    text-align: center;
+    padding: 0 1rem;
+    position: relative;
+}
+
+.step-number {
+    width: 4rem; height: 4rem;
+    background: linear-gradient(135deg, #B8860B, #DAA520);
+    color: #fff;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--font-number);
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin: 0 auto 1.25rem;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 0 0 6px rgba(184,134,11,0.12);
+}
+
+.step-title {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--color-heading);
+    margin-bottom: 0.4rem;
+}
+
+.step-desc {
+    font-size: 0.82rem;
+    color: var(--color-muted);
+    line-height: 1.5;
+}
+
+/* ── Registration Form ── */
+.reg-form-section {
+    background: linear-gradient(180deg, #F8FAFC 0%, #FFFFFF 100%);
+    border-top: 1px solid var(--color-border);
+}
+
+.reg-form-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 340px;
+    gap: 3rem;
+    align-items: start;
+}
+
+.reg-form-card {
+    background: #fff;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: 2.5rem;
+    box-shadow: var(--shadow-card);
+}
+
+.form-section-title {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--color-gold-dark);
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.form-group {
+    margin-bottom: 1.25rem;
+}
+
+.form-label {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--color-heading);
+    margin-bottom: 0.4rem;
+}
+
+.form-label .required {
+    color: #EF4444;
+    margin-left: 0.2rem;
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+    width: 100%;
+    padding: 0.7rem 1rem;
+    border: 1.5px solid var(--color-border);
+    border-radius: var(--radius-md);
+    font-size: 0.9rem;
+    color: var(--color-heading);
+    background: #fafafa;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    font-family: var(--font-body);
+    outline: none;
+    box-sizing: border-box;
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+    border-color: var(--color-gold);
+    box-shadow: 0 0 0 3px rgba(184,134,11,0.1);
+    background: #fff;
+}
+
+.form-input.error,
+.form-select.error {
+    border-color: #EF4444;
+    box-shadow: 0 0 0 3px rgba(239,68,68,0.08);
+}
+
+.field-error {
+    font-size: 0.76rem;
+    color: #EF4444;
+    margin-top: 0.3rem;
+    display: none;
+}
+
+.field-error.visible { display: block; }
+
+/* Honeypot — hidden from users but visible to bots */
+.honeypot-field {
+    position: absolute;
+    left: -9999px;
+    top: -9999px;
+    opacity: 0;
+    pointer-events: none;
+    tab-index: -1;
+    aria-hidden: true;
+}
+
+.consent-group {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.consent-group input[type="checkbox"] {
+    width: 18px; height: 18px;
+    margin-top: 2px;
+    accent-color: var(--color-gold);
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+.consent-label {
+    font-size: 0.82rem;
+    color: var(--color-body);
+    line-height: 1.5;
+}
+
+.consent-label a {
+    color: var(--color-gold-dark);
+    text-decoration: underline;
+}
+
+/* Photo upload */
+.photo-upload-area {
+    border: 2px dashed var(--color-border);
+    border-radius: var(--radius-md);
+    padding: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    transition: border-color 0.2s;
+}
+
+.photo-upload-area:hover { border-color: var(--color-gold); }
+
+.photo-upload-area input { display: none; }
+
+.photo-preview {
+    width: 80px; height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: none;
+    margin: 0 auto 0.75rem;
+}
+
+/* ── Success Screen ── */
+.success-screen {
+    display: none;
+    text-align: center;
+    padding: 3rem 2rem;
+}
+
+.success-screen.visible { display: block; }
+
+.success-icon {
+    width: 80px; height: 80px;
+    background: linear-gradient(135deg, #10B981, #059669);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 2rem;
+    margin: 0 auto 1.5rem;
+    box-shadow: 0 0 0 12px rgba(16,185,129,0.1);
+}
+
+.success-app-number {
+    display: inline-block;
+    background: linear-gradient(135deg, #fffbf0, #fef9ec);
+    border: 1px solid rgba(184,134,11,0.35);
+    color: var(--color-gold-dark);
+    font-family: var(--font-number);
+    font-size: 1.2rem;
+    font-weight: 700;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--radius-md);
+    margin: 1rem 0;
+    letter-spacing: 0.05em;
+}
+
+/* ── Privacy Info Sidebar ── */
+.reg-sidebar-card {
+    background: linear-gradient(145deg, #0B1320, #162035);
+    border: 1px solid rgba(184,134,11,0.2);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    color: rgba(255,255,255,0.8);
+    position: sticky;
+    top: 7rem;
+}
+
+.reg-sidebar-card h3 {
+    color: #fff;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.privacy-item {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+    font-size: 0.82rem;
+    line-height: 1.5;
+}
+
+.privacy-item-icon {
+    font-size: 1.1rem;
+    flex-shrink: 0;
+    margin-top: 1px;
+}
+
+/* ── QR Verification Page ── */
+.verify-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #0B1320 0%, #0f1c30 100%);
+    padding: 6rem 1rem;
+}
+
+.verify-card {
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(184,134,11,0.25);
+    border-radius: 1.5rem;
+    padding: 3rem 2.5rem;
+    text-align: center;
+    max-width: 460px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.verify-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+    background: var(--color-gold-gradient);
+}
+
+.verify-status-icon {
+    width: 80px; height: 80px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 2.2rem;
+    margin: 0 auto 1.5rem;
+}
+
+.verify-status-icon.verified { background: rgba(16,185,129,0.15); border: 2px solid #10B981; }
+.verify-status-icon.invalid  { background: rgba(239,68,68,0.12);  border: 2px solid #EF4444; }
+.verify-status-icon.revoked  { background: rgba(239,68,68,0.12);  border: 2px solid #EF4444; }
+.verify-status-icon.loading  { background: rgba(184,134,11,0.12); border: 2px solid var(--color-gold); }
+
+.verify-status-badge {
+    display: inline-block;
+    padding: 0.35rem 1rem;
+    border-radius: 99px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+}
+
+.badge-verified { background: rgba(16,185,129,0.15); color: #10B981; }
+.badge-invalid  { background: rgba(239,68,68,0.12);  color: #EF4444; }
+.badge-revoked  { background: rgba(239,68,68,0.12);  color: #EF4444; }
+.badge-loading  { background: rgba(184,134,11,0.12); color: var(--color-gold); }
+
+.verify-member-name {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 0.25rem;
+}
+
+.verify-membership-id {
+    font-family: var(--font-number);
+    font-size: 1rem;
+    color: var(--color-gold-light);
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.05em;
+}
+
+.verify-detail-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.6rem 0;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    font-size: 0.85rem;
+}
+
+.verify-detail-label { color: rgba(255,255,255,0.45); }
+.verify-detail-value { color: rgba(255,255,255,0.85); font-weight: 600; }
+
+.verify-footer-note {
+    margin-top: 1.5rem;
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.35);
+    line-height: 1.5;
+}
+
+/* ── Membership Nav Button ── */
+.btn-membership {
+    background: transparent;
+    color: var(--color-gold);
+    border: 1.5px solid var(--color-gold);
+    padding: 0.45rem 1.1rem;
+    border-radius: var(--radius-md);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    cursor: pointer;
+    transition: all 0.25s var(--ease-luxury);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.btn-membership:hover {
+    background: var(--color-gold);
+    color: #fff;
+    box-shadow: 0 0 18px rgba(184,134,11,0.4);
+}
+
+/* ── Responsive ── */
+@media (max-width: 960px) {
+    .membership-hero-grid { grid-template-columns: 1fr; }
+    .membership-hero-card { display: none; }
+    .how-it-works-steps { grid-template-columns: 1fr 1fr; }
+    .how-it-works-steps::before { display: none; }
+    .reg-form-wrapper { grid-template-columns: 1fr; }
+    .reg-sidebar-card { position: static; }
+}
+
+@media (max-width: 640px) {
+    .form-row { grid-template-columns: 1fr; }
+    .how-it-works-steps { grid-template-columns: 1fr; }
+    .benefits-grid { grid-template-columns: 1fr; }
+    .membership-hero { padding: 7rem 0 4rem; }
+}
+
+/* ============================================================
+   SUBMIT BUTTON — PROFESSIONAL STATE STYLES
+   v2.0: loading / success / error / shake / pulse
+   ============================================================ */
+
+/* Shared inner layout for button states */
+.btn-state-inner {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    pointer-events: none;
+}
+
+/* Loading spinner */
+.btn-spinner {
+    animation: fcp-spin 0.75s linear infinite;
+    flex-shrink: 0;
+}
+
+/* ── SUCCESS STATE ── */
+#fcp-submit-btn.btn-state-success {
+    background: linear-gradient(135deg, #059669 0%, #10B981 100%) !important;
+    border-color: #059669 !important;
+    color: #fff !important;
+    cursor: default !important;
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4);
+    transform: none !important;
+    transition: background 0.4s ease, box-shadow 0.4s ease;
+}
+
+.btn-icon-check {
+    flex-shrink: 0;
+    animation: fcp-check-draw 0.45s ease-out forwards;
+}
+
+@keyframes fcp-check-draw {
+    from { stroke-dasharray: 30; stroke-dashoffset: 30; opacity: 0; }
+    to   { stroke-dasharray: 30; stroke-dashoffset: 0;  opacity: 1; }
+}
+
+/* ── ERROR STATE ── */
+#fcp-submit-btn.btn-state-error {
+    background: linear-gradient(135deg, #DC2626 0%, #EF4444 100%) !important;
+    border-color: #DC2626 !important;
+    color: #fff !important;
+    cursor: pointer !important;
+    transition: background 0.35s ease, transform 0.2s ease;
+}
+
+#fcp-submit-btn.btn-state-error:hover {
+    background: linear-gradient(135deg, #B91C1C 0%, #DC2626 100%) !important;
+    transform: translateY(-1px) !important;
+}
+
+.btn-icon-x {
+    flex-shrink: 0;
+    animation: fcp-x-pop 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+@keyframes fcp-x-pop {
+    from { transform: scale(0.5); opacity: 0; }
+    to   { transform: scale(1);   opacity: 1; }
+}
+
+/* ── SHAKE ANIMATION (validation error) ── */
+.btn-shake {
+    animation: fcp-shake 0.42s cubic-bezier(0.36, 0.07, 0.19, 0.97) both !important;
+}
+
+@keyframes fcp-shake {
+    10%, 90% { transform: translateX(-3px); }
+    20%, 80% { transform: translateX(5px); }
+    30%, 50%, 70% { transform: translateX(-7px); }
+    40%, 60% { transform: translateX(7px); }
+    100% { transform: translateX(0); }
+}
+
+/* ── PULSE ANIMATION (success flash) ── */
+.btn-pulse-once {
+    animation: fcp-pulse-once 0.55s ease-out !important;
+}
+
+@keyframes fcp-pulse-once {
+    0%   { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.55); }
+    60%  { box-shadow: 0 0 0 18px rgba(16, 185, 129, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+}
+
+/* Spin keyframe (shared with loader) */
+@keyframes fcp-spin {
+    to { transform: rotate(360deg); }
+}

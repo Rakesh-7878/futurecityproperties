@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify Membership | FutureCity Properties</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/membership.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <!-- SEO Meta -->
+    <meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+    
+    <div class="verify-page">
+        <div class="verify-card" id="verify-wrap">
+            <div style="margin-bottom: 2rem;">
+                <img src="images/logo.png" alt="FutureCity" width="120" onerror="this.style.display='none'">
+            </div>
+            
+            <div class="verify-status-icon loading" id="verify-icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="animation:spin 1s linear infinite">
+                    <circle cx="12" cy="12" r="10" stroke-opacity="0.2"/>
+                    <path d="M12 2a10 10 0 0 1 10 10" stroke-linecap="round"/>
+                </svg>
+            </div>
+            
+            <div class="verify-status-badge badge-loading" id="verify-badge">VERIFYING...</div>
+            
+            <h1 class="verify-member-name" id="verify-title">Please Wait</h1>
+            <div class="verify-membership-id" id="verify-msg">Verifying secure membership token...</div>
+            
+            <div id="verify-details" style="margin-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1rem; text-align: left;">
+                <!-- Details injected securely by JS -->
+            </div>
+            
+            <div class="verify-footer-note">
+                This verification is performed securely in real-time against the FutureCity Properties membership database.
+            </div>
+            
+            <div style="margin-top:2rem;">
+                <a href="index.html" class="btn outline" style="color:rgba(255,255,255,0.7); border-color:rgba(255,255,255,0.2);">Return to Home</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- JS -->
+    <script src="js/ui.js"></script>
+    <script src="js/verify.js"></script>
+    <footer class="footer">
+        <div class="container">
+            <div class="grid grid-4 gap-lg">
+                <div>
+                    <a href="index.html" class="brand-logo footer-brand">
+                        <div class="logo-circle"><img src="images/logo.png" alt="FutureCity Properties"
+                                class="header-logo-img" /></div>
+                    </a>
+                    <p class="footer-description">Hyderabad’s premier luxury real estate advisory firm specializing in
+                        verified open plots, villa estates, and sky residences.</p>
+                </div>
+
+                <div>
+                    <h4 class="footer-heading">Navigation</h4>
+                    <div class="footer-links">
+                        <a href="about.html">About FutureCity</a>
+                        <a href="projects.html">Projects & Plots</a>
+                        <a href="membership.html">Membership</a>
+                        <a href="member/login.html">Member Portal</a>
+                        <a href="investment.html">Investment Guide</a>
+                        <a href="services.html">Our Services</a>
+                        <a href="contact.html">Contact Advisory</a>
+                        <a href="admin/login.html" style="color:rgba(255,255,255,0.2);">Admin Access</a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="footer-heading">Corridors</h4>
+                    <div class="footer-links">
+                        <a href="projects.html">Mucherla Future City Plots</a>
+                        <a href="projects.html">Kokapet Villa Estates</a>
+                        <a href="projects.html">Neopolis Sky Villas</a>
+                        <a href="projects.html">Financial District Hub</a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="footer-heading">Private Insights</h4>
+                    <p style="font-size: 0.85rem; color: #94A3B8;">Receive confidential pre-launch price sheets and plot
+                        layout maps.</p>
+                    <form id="newsletterForm" class="footer-newsletter-form">
+                        <input type="email" placeholder="Your Email..." required class="glass-input"
+                            style="font-size: 0.85rem; padding: 0.6rem 1rem;">
+                        <button type="submit" class="btn btn-gold" style="padding: 0.6rem 1rem;">Join</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div>&copy; 2026 FutureCity Properties Pvt. Ltd. All rights reserved. TS-RERA Regd. Real Estate Agent.
+                </div>
+                <div class="flex gap-md">
+                    <a href="privacy.html" style="color: #94A3B8;">Privacy Policy</a>
+                    <a href="terms.html" style="color: #94A3B8;">Terms & Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

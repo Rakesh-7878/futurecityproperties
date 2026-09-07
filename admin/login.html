@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login | FutureCity Properties</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/admin.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <!-- SEO Meta -->
+    <meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+    
+    <div class="admin-login-page">
+        <div class="admin-login-card">
+            <div style="text-align:center; margin-bottom:2rem;">
+                <img src="../images/logo.png" alt="FutureCity Admin" onerror="this.src='https://placehold.co/56?text=ADMIN'" style="width:56px; border-radius:50%; border:2px solid rgba(184,134,11,0.4); margin-bottom:0.75rem;">
+                <h1 style="color:#fff; font-size:1.3rem; margin-bottom:0.25rem;">Admin Secure Access</h1>
+                <p style="color:rgba(255,255,255,0.4); font-size:0.8rem;">Authorized personnel only</p>
+            </div>
+            
+            <form id="admin-login-form">
+                <div style="margin-bottom:1rem;">
+                    <label style="display:block; font-size:0.75rem; color:rgba(255,255,255,0.6); margin-bottom:0.4rem;">Admin Email</label>
+                    <input type="email" id="admin-email" class="admin-search-input" style="width:100%; background:rgba(255,255,255,0.06); border-color:rgba(255,255,255,0.12); color:#fff;" required>
+                </div>
+                
+                <div style="margin-bottom:2rem;">
+                    <label style="display:block; font-size:0.75rem; color:rgba(255,255,255,0.6); margin-bottom:0.4rem;">Password</label>
+                    <input type="password" id="admin-pass" class="admin-search-input" style="width:100%; background:rgba(255,255,255,0.06); border-color:rgba(255,255,255,0.12); color:#fff;" required>
+                </div>
+                
+                <button type="submit" id="admin-login-btn" class="btn" style="width:100%; justify-content:center; background:var(--color-gold); color:#fff; border:none;">Login to Dashboard</button>
+            </form>
+            
+            <div style="margin-top:2rem; text-align:center; font-size:0.75rem; color:rgba(255,255,255,0.3);">
+                Strict auditing is enforced. Unauthorized access is prohibited.
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/auth.js"></script>
+    <script src="../js/ui.js"></script>
+    <script src="../js/admin.js"></script>
+    <footer class="footer">
+        <div class="container">
+            <div class="grid grid-4 gap-lg">
+                <div>
+                    <a href="../index.html" class="brand-logo footer-brand">
+                        <div class="logo-circle"><img src="../images/logo.png" alt="FutureCity Properties"
+                                class="header-logo-img" /></div>
+                    </a>
+                    <p class="footer-description">Hyderabad’s premier luxury real estate advisory firm specializing in
+                        verified open plots, villa estates, and sky residences.</p>
+                </div>
+
+                <div>
+                    <h4 class="footer-heading">Navigation</h4>
+                    <div class="footer-links">
+                        <a href="../about.html">About FutureCity</a>
+                        <a href="../projects.html">Projects & Plots</a>
+                        <a href="../membership.html">Membership</a>
+                        <a href="../member/login.html">Member Portal</a>
+                        <a href="../investment.html">Investment Guide</a>
+                        <a href="../services.html">Our Services</a>
+                        <a href="../contact.html">Contact Advisory</a>
+                        <a href="../admin/login.html" style="color:rgba(255,255,255,0.2);">Admin Access</a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="footer-heading">Corridors</h4>
+                    <div class="footer-links">
+                        <a href="../projects.html">Mucherla Future City Plots</a>
+                        <a href="../projects.html">Kokapet Villa Estates</a>
+                        <a href="../projects.html">Neopolis Sky Villas</a>
+                        <a href="../projects.html">Financial District Hub</a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="footer-heading">Private Insights</h4>
+                    <p style="font-size: 0.85rem; color: #94A3B8;">Receive confidential pre-launch price sheets and plot
+                        layout maps.</p>
+                    <form id="newsletterForm" class="footer-newsletter-form">
+                        <input type="email" placeholder="Your Email..." required class="glass-input"
+                            style="font-size: 0.85rem; padding: 0.6rem 1rem;">
+                        <button type="submit" class="btn btn-gold" style="padding: 0.6rem 1rem;">Join</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div>&copy; 2026 FutureCity Properties Pvt. Ltd. All rights reserved. TS-RERA Regd. Real Estate Agent.
+                </div>
+                <div class="flex gap-md">
+                    <a href="../privacy.html" style="color: #94A3B8;">Privacy Policy</a>
+                    <a href="../terms.html" style="color: #94A3B8;">Terms & Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

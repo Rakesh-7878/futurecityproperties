@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore high-resolution architectural photography, drone aerials, and property interiors from FutureCity Properties' premium projects across Hyderabad.">
+    <title>Property Gallery | Architectural Photography & Aerials | FutureCity Properties</title>
+
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/utilities.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="icon" type="image/png" href="images/logo.png">
+
+    <!-- SEO Meta -->
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://futurecityproperties.com/gallery.html">
+    <meta property="og:title" content="Property Gallery">
+    <meta property="og:description" content="Explore high-resolution architectural photography, drone aerials, and property interiors from FutureCity Properties' premium projects across Hyderabad.">
+    <meta property="og:url" content="https://futurecityproperties.com/gallery.html">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://futurecityproperties.com/images/logo.png">
+    <meta property="og:site_name" content="FutureCity Properties">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Property Gallery">
+    <meta name="twitter:description" content="Explore high-resolution architectural photography, drone aerials, and property interiors from FutureCity Properties' premium projects across Hyderabad.">
+    <meta name="twitter:image" content="https://futurecityproperties.com/images/logo.png">
+</head>
+<body>
+    <canvas id="ambientCanvas" class="bg-ambient-canvas"></canvas>
+    <div class="custom-cursor-dot"></div>
+    <div class="custom-cursor-ring"></div>
+
+    <header class="header">
+        <div class="container nav-container">
+            <a href="index.html" class="brand-logo">
+                <div class="logo-circle"><img src="images/logo.png" alt="FutureCity Properties Logo" class="header-logo-img" /></div>
+                <div class="brand-name"><span class="brand-name-main">FutureCity</span><span class="brand-name-sub">Properties</span></div>
+            </a>
+
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="projects.html" class="nav-link">Projects</a>
+                <a href="investment.html" class="nav-link">Investment</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="gallery.html" class="nav-link active">Gallery</a>
+                <a href="blogs.html" class="nav-link">Insights</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+
+            <button class="btn btn-gold open-site-visit-modal" style="display: none; display: md-inline-flex;">Book Site Visit</button>
+            <button class="hamburger-btn" aria-label="Toggle Menu"><span></span><span></span><span></span></button>
+        </div>
+    </header>
+
+    <div class="mobile-drawer-overlay"></div>
+    <div class="mobile-drawer">
+        <div class="mobile-nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="projects.html">Projects</a>
+            <a href="investment.html">Investment</a>
+            <a href="services.html">Services</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="blogs.html">Insights</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+
+    <!-- PAGE HERO -->
+    <section class="section" style="padding-top: 10rem; background: linear-gradient(180deg, #0F243C 0%, #081522 100%);">
+        <div class="container text-center reveal-up">
+            <span class="section-subtitle">Visual Splendor</span>
+            <h1 style="margin-bottom: 1.5rem;">Architectural <span class="shimmer-text">Gallery</span></h1>
+            <p class="section-description" style="max-width: 680px; margin: 0 auto;">Immerse yourself in 4K photography detailing our sky villas, clubhouses, and aerial corridors.</p>
+        </div>
+    </section>
+
+    <!-- GALLERY GRID -->
+    <section class="section">
+        <div class="container">
+            <div class="grid grid-3 gap-md stagger-parent">
+                <div class="glass-card reveal-child" style="overflow: hidden; height: 320px;">
+                    <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80" alt="Exteriors" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div class="glass-card reveal-child" style="overflow: hidden; height: 320px;">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Penthouse" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div class="glass-card reveal-child" style="overflow: hidden; height: 320px;">
+                    <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80" alt="Interior" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div class="glass-card reveal-child" style="overflow: hidden; height: 320px;">
+                    <img src="https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&w=800&q=80" alt="Gated Estate" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div class="glass-card reveal-child" style="overflow: hidden; height: 320px;">
+                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80" alt="Commercial" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div class="glass-card reveal-child" style="overflow: hidden; height: 320px;">
+                    <img src="https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=800&q=80" alt="Pool Deck" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+        <footer class="footer">
+        <div class="container">
+            <div class="grid grid-4 gap-lg">
+                <div>
+                    <a href="index.html" class="brand-logo footer-brand">
+                        <div class="logo-circle"><img src="images/logo.png" alt="FutureCity Properties"
+                                class="header-logo-img" /></div>
+                    </a>
+                    <p class="footer-description">Hyderabad’s premier luxury real estate advisory firm specializing in
+                        verified open plots, villa estates, and sky residences.</p>
+                </div>
+
+                <div>
+                    <h4 class="footer-heading">Navigation</h4>
+                    <div class="footer-links">
+                        <a href="about.html">About FutureCity</a>
+                        <a href="projects.html">Projects & Plots</a>
+                        <a href="membership.html">Membership</a>
+                        <a href="member/login.html">Member Portal</a>
+                        <a href="investment.html">Investment Guide</a>
+                        <a href="services.html">Our Services</a>
+                        <a href="contact.html">Contact Advisory</a>
+                        <a href="admin/login.html" style="color:rgba(255,255,255,0.2);">Admin Access</a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="footer-heading">Corridors</h4>
+                    <div class="footer-links">
+                        <a href="projects.html">Mucherla Future City Plots</a>
+                        <a href="projects.html">Kokapet Villa Estates</a>
+                        <a href="projects.html">Neopolis Sky Villas</a>
+                        <a href="projects.html">Financial District Hub</a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="footer-heading">Private Insights</h4>
+                    <p style="font-size: 0.85rem; color: #94A3B8;">Receive confidential pre-launch price sheets and plot
+                        layout maps.</p>
+                    <form id="newsletterForm" class="footer-newsletter-form">
+                        <input type="email" placeholder="Your Email..." required class="glass-input"
+                            style="font-size: 0.85rem; padding: 0.6rem 1rem;">
+                        <button type="submit" class="btn btn-gold" style="padding: 0.6rem 1rem;">Join</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div>&copy; 2026 FutureCity Properties Pvt. Ltd. All rights reserved. TS-RERA Regd. Real Estate Agent.
+                </div>
+                <div class="flex gap-md">
+                    <a href="privacy.html" style="color: #94A3B8;">Privacy Policy</a>
+                    <a href="terms.html" style="color: #94A3B8;">Terms & Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/cursor.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/scroll.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/main.js"></script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ImageGallery",
+        "name": "FutureCity Properties Photo Gallery",
+        "description": "High-resolution architectural photography, drone aerials, and property interiors from FutureCity Properties projects.",
+        "url": "https://futurecityproperties.com/gallery.html",
+        "publisher": {
+            "@type": "Organization",
+            "name": "FutureCity Properties"
+        }
+    }
+    </script>
+</body>
+</html>

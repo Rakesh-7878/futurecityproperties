@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="True Prestige Commercial — Luxurious villa plots at the epicenter of Yadadri, East Hyderabad. Starting at Rs.9,999/sq.yd. Explore layout, amenities, connectivity and flexible payment options.">
+    <title>True Prestige Commercial | Yadagirigutta Plots | FutureCity Properties</title>
+
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/utilities.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="icon" type="image/png" href="images/logo.png">
+
+    <style>
+        /* ── Hero ── */
+        .th-hero-section { padding-top: 9rem; background: linear-gradient(180deg, #F8FAFC 0%, #FFFFFF 100%); }
+
+        .th-title-badge-row { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 0.75rem; }
+        .th-main-title {
+            font-size: clamp(2rem, 4vw, 3.2rem);
+            font-family: var(--font-heading);
+            color: var(--color-heading);
+            margin: 0 0 0.35rem;
+            line-height: 1.15;
+        }
+        .th-sub-location { font-size: 1.05rem; font-weight: 600; color: var(--color-gold-dark); letter-spacing: 0.03em; }
+
+        /* ── Image Hero Banner ── */
+        .th-image-grid {
+            width: 100%;
+            height: 480px;
+            margin-top: 2rem;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-card);
+        }
+        .th-img-main { width: 100%; height: 100%; overflow: hidden; }
+        .th-img-main img {
+            width: 100%; height: 100%; object-fit: cover; display: block;
+            transition: transform 0.8s var(--ease-luxury);
+        }
+        .th-img-main:hover img { transform: scale(1.03); }
+
+        /* ── Divider ── */
+        .th-divider { width: 60px; height: 3px; background: var(--color-gold-gradient); border-radius: 99px; margin: 0.6rem 0 1.5rem; }
+
+        /* ── Payment Cards ── */
+        .th-payment-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; margin-bottom: 2rem; }
+        .th-payment-card {
+            background: #fff;
+            border: 1px solid var(--color-border-gold);
+            border-radius: var(--radius-md);
+            padding: 1.75rem 1.5rem;
+            text-align: center;
+            box-shadow: var(--shadow-card);
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s var(--ease-luxury), box-shadow 0.3s;
+        }
+        .th-payment-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: var(--color-gold-gradient); }
+        .th-payment-card:hover { transform: translateY(-4px); box-shadow: 0 20px 45px rgba(184,134,11,0.18); }
+        .th-payment-card.featured { background: linear-gradient(145deg, #fffbf0, #fff9e6); }
+        .th-option-label {
+            font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+            color: var(--color-gold-dark); background: rgba(184,134,11,0.1);
+            display: inline-block; padding: 0.25rem 0.75rem; border-radius: 99px; margin-bottom: 0.9rem;
+        }
+        .th-option-title { font-size: 0.95rem; font-weight: 600; color: var(--color-heading); margin-bottom: 1rem; min-height: 2.5em; line-height: 1.4; }
+        .th-price-big { font-family: var(--font-number); font-size: 2.2rem; font-weight: 700; color: var(--color-gold-dark); line-height: 1; }
+        .th-per-sqyd { font-size: 0.8rem; color: var(--color-muted); margin-top: 0.3rem; }
+
+        /* ── Dev Cost Banner ── */
+        .th-dev-cost {
+            display: flex; align-items: center; gap: 1.2rem;
+            background: linear-gradient(135deg, #0B1320 0%, #1a2740 100%);
+            color: #fff; border-radius: var(--radius-md); padding: 1.25rem 2rem; margin: 1.5rem 0;
+        }
+        .th-dev-cost-icon { font-size: 2rem; }
+        .th-dev-cost-label { font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.55); }
+        .th-dev-cost-value { font-family: var(--font-number); font-size: 1.5rem; font-weight: 700; color: var(--color-gold-light); }
+
+        /* ── Note Box ── */
+        .th-note-box {
+            background: linear-gradient(135deg, #fffbf0, #fef9ec);
+            border: 1px solid rgba(184,134,11,0.35);
+            border-left: 4px solid var(--color-gold);
+            border-radius: var(--radius-md);
+            padding: 1.25rem 1.5rem;
+            font-size: 0.875rem; color: #5c4a1e; line-height: 1.7;
+        }
+        .th-note-box p { margin: 0 0 0.65rem; }
+        .th-note-box p:last-child { margin: 0; }
+        .th-note-box strong { color: var(--color-gold-dark); }
+
+        /* ── Amenities ── */
+        .th-amenities-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(155px, 1fr)); gap: 1rem; margin-top: 1rem; }
+        .th-amenity-card {
+            background: #fff; border: 1px solid var(--color-border);
+            border-radius: var(--radius-md); padding: 1.25rem 1rem; text-align: center;
+            transition: all 0.3s var(--ease-luxury); cursor: default;
+        }
+        .th-amenity-card:hover { border-color: var(--color-border-gold); box-shadow: 0 8px 24px rgba(184,134,11,0.12); transform: translateY(-3px); }
+        .th-amenity-icon { font-size: 1.8rem; margin-bottom: 0.5rem; }
+        .th-amenity-name { font-size: 0.8rem; font-weight: 600; color: var(--color-heading); line-height: 1.35; }
+
+        /* ── Location Highlights ── */
+        .th-highlight-group {
+            background: #fff; border: 1px solid var(--color-border);
+            border-radius: var(--radius-md); padding: 1.5rem; margin-bottom: 1.25rem;
+            box-shadow: var(--shadow-subtle); transition: box-shadow 0.3s;
+        }
+        .th-highlight-group:hover { box-shadow: var(--shadow-card); }
+        .th-highlight-group-title {
+            display: flex; align-items: center; gap: 0.75rem;
+            font-size: 1rem; font-weight: 700; color: var(--color-heading);
+            margin-bottom: 1rem; padding-bottom: 0.75rem; border-bottom: 1px solid var(--color-border);
+        }
+        .th-icon-wrap {
+            width: 36px; height: 36px; background: var(--color-gold-gradient);
+            border-radius: 8px; display: flex; align-items: center; justify-content: center;
+            font-size: 1rem; flex-shrink: 0;
+        }
+        .th-hl-list { list-style: none; padding: 0; margin: 0; }
+        .th-hl-list li {
+            display: flex; align-items: flex-start; gap: 0.6rem;
+            padding: 0.45rem 0; font-size: 0.875rem; color: var(--color-body);
+            line-height: 1.55; border-bottom: 1px solid var(--color-border);
+        }
+        .th-hl-list li:last-child { border-bottom: none; }
+        .th-bullet { width: 7px; height: 7px; background: var(--color-gold); border-radius: 50%; flex-shrink: 0; margin-top: 0.4rem; }
+
+        /* ── CTA Box ── */
+        .th-cta-box {
+            background: linear-gradient(135deg, #0B1320 0%, #162035 100%);
+            border-radius: var(--radius-lg); padding: 2.5rem; text-align: center;
+            border: 1px solid rgba(184,134,11,0.25);
+        }
+        .th-cta-box h3 { color: #fff; font-size: 1.5rem; margin-bottom: 0.5rem; }
+        .th-cta-box p { color: rgba(255,255,255,0.6); font-size: 0.9rem; margin-bottom: 1.75rem; }
+        .th-cta-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+        /* ── Sidebar ── */
+        .th-sidebar-card {
+            background: #fff; border: 1px solid var(--color-border-gold);
+            border-radius: var(--radius-lg); padding: 2rem;
+            box-shadow: var(--shadow-card); position: sticky; top: 7rem;
+        }
+        .th-sidebar-card h3 { font-size: 1.3rem; margin-bottom: 0.4rem; color: var(--color-heading); }
+        .th-sidebar-card p { font-size: 0.82rem; color: var(--color-muted); margin-bottom: 1.5rem; }
+
+        /* ── Layout ── */
+        .th-main-layout { display: grid; grid-template-columns: 1fr 340px; gap: 3rem; align-items: start; }
+
+        /* ── Responsive ── */
+        @media (max-width: 960px) {
+            .th-payment-grid { grid-template-columns: 1fr; }
+            .th-image-grid { height: 320px; }
+            .th-main-layout { grid-template-columns: 1fr; }
+            .th-sidebar-card { position: static; }
+        }
+        @media (max-width: 640px) {
+            .th-amenities-grid { grid-template-columns: repeat(2, 1fr); }
+            .th-image-grid { height: 240px; }
+        }
+    </style>
+
+    <!-- SEO Meta -->
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://futurecityproperties.com/true-prestige-commercial-details.html">
+    <meta property="og:title" content="True Prestige Commercial">
+    <meta property="og:description" content="True Prestige Commercial — Luxurious villa plots at the epicenter of Yadadri, East Hyderabad. Starting at Rs.9,999/sq.yd. Explore layout, amenities, connectivity and flexible payment options.">
+    <meta property="og:url" content="https://futurecityproperties.com/true-prestige-commercial-details.html">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://futurecityproperties.com/images/logo.png">
+    <meta property="og:site_name" content="FutureCity Properties">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="True Prestige Commercial">
+    <meta name="twitter:description" content="True Prestige Commercial — Luxurious villa plots at the epicenter of Yadadri, East Hyderabad. Starting at Rs.9,999/sq.yd. Explore layout, amenities, connectivity and flexible payment options.">
+    <meta name="twitter:image" content="https://futurecityproperties.com/images/logo.png">
+</head>
+<body>
+    <canvas id="ambientCanvas" class="bg-ambient-canvas"></canvas>
+    <div class="custom-cursor-dot"></div>
+    <div class="custom-cursor-ring"></div>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="index.html" class="brand-logo">
+                <div class="logo-circle"><img src="images/logo.png" alt="FutureCity Properties Logo" class="header-logo-img" /></div>
+                <div class="brand-name"><span class="brand-name-main">FutureCity</span><span class="brand-name-sub">Properties</span></div>
+            </a>
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="projects.html" class="nav-link active">Projects &amp; Plots</a>
+                <a href="investment.html" class="nav-link">Investment</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="gallery.html" class="nav-link">Gallery</a>
+                <a href="blogs.html" class="nav-link">Insights</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+            <button class="btn btn-gold open-site-visit-modal">Book Site Visit</button>
+            <button class="hamburger-btn" aria-label="Toggle Menu"><span></span><span></span><span></span></button>
+        </div>
+    </header>
+
+    <div class="mobile-drawer-overlay"></div>
+    <div class="mobile-drawer">
+        <div class="mobile-nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="projects.html">Projects &amp; Plots</a>
+            <a href="investment.html">Investment</a>
+            <a href="services.html">Services</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="blogs.html">Insights</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+
+    <!-- ═══════ HERO – TITLE + IMAGE GALLERY ═══════ -->
+    <section class="th-hero-section">
+        <div class="container">
+
+            <!-- Breadcrumb -->
+            <div style="font-size:0.8rem; color:var(--color-muted); margin-bottom:1.5rem;">
+                <a href="index.html" style="color:var(--color-muted); text-decoration:none;">Home</a>
+                <span style="margin:0 0.45rem; color:var(--color-muted);">›</span>
+                <a href="projects.html" style="color:var(--color-muted); text-decoration:none;">Projects &amp; Plots</a>
+                <span style="margin:0 0.45rem; color:var(--color-muted);">›</span>
+                <span style="color:var(--color-gold-dark); font-weight:600;">True Prestige Commercial</span>
+            </div>
+
+            <!-- Title Block -->
+            <div class="reveal-up">
+                <div class="th-title-badge-row">
+                    <span class="badge badge-plot">Villa Plots</span>
+                    <span class="badge badge-verified">DTCP- RERA APPROVED</span>
+                    <span class="badge badge-gold">New Launch</span>
+                </div>
+                <h1 class="th-main-title">True Prestige <span class="text-gold-gradient">Commercial</span></h1>
+                <div class="th-sub-location">&#128205; Yadagirigutta &ndash; East Hyderabad</div>
+            </div>
+
+            <!-- Hero Image Banner -->
+            <div class="th-image-grid reveal-scale">
+                <div class="th-img-main">
+                    <img src="https://i.pinimg.com/736x/13/1c/2f/131c2fcc209c5494a695b5ef67fdf647.jpg"
+                         alt="True Prestige Commercial – Villa Plots, Yadagirigutta">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════ MAIN CONTENT + SIDEBAR ═══════ -->
+    <section class="section">
+        <div class="container">
+            <div class="th-main-layout">
+
+                <!-- ─── LEFT CONTENT ─── -->
+                <div>
+
+                    <!-- PAYMENT OPTIONS -->
+                    <h2 class="section-title" style="font-size:1.7rem; margin-bottom:0.4rem;">Payment Options</h2>
+                    <div class="th-divider"></div>
+                    <p style="font-size:0.9rem; color:var(--color-muted); margin-bottom:1.5rem;">
+                        Choose the plan that best suits your investment timeline. All prices are inclusive of estimated plot development cost.
+                    </p>
+
+                    <div class="th-payment-grid">
+                        <div class="th-payment-card reveal-child">
+                            <div class="th-option-label">TPC (All Avenues)</div>
+                            <div class="th-option-title">Option-A, 100% Spot Payment</div>
+                            <div class="th-price-big">Rs. 9,999</div>
+                            <div class="th-per-sqyd">Per Square Yard</div>
+                        </div>
+                        <div class="th-payment-card featured reveal-child">
+                            <div class="th-option-label">TPC (All Avenues)</div>
+                            <div class="th-option-title">Option-B, 50% Advance &amp; 50% Within a Month</div>
+                            <div class="th-price-big">Rs. 10,499</div>
+                            <div class="th-per-sqyd">Per Square Yard</div>
+                        </div>
+                        <div class="th-payment-card reveal-child">
+                            <div class="th-option-label">TPC (All Avenues)</div>
+                            <div class="th-option-title">Option-C, Plot Allotment advance balance within 3 Months</div>
+                            <div class="th-price-big">Rs. 10,999</div>
+                            <div class="th-per-sqyd">Per Square Yard</div>
+                        </div>
+                    </div>
+
+                    <!-- Dev Cost Banner -->
+                    <div class="th-dev-cost reveal-up">
+                        <div class="th-dev-cost-icon">&#127959;</div>
+                        <div>
+                            <div class="th-dev-cost-label">Estimated Plot Development Cost (Including GST)</div>
+                            <div class="th-dev-cost-value">Rs. 1,200 / Sq. Yd</div>
+                        </div>
+                    </div>
+
+                    <!-- Note Box -->
+                    <div class="th-note-box reveal-up">
+                        <p>&#9888;&#65039; <strong>ESTIMATED PLOT DEVELOPMENT COST:</strong> RS. 1200/-**(INCLUDING GST) PER SQ.YRD</p>
+                        <p><strong>*Note:</strong> The aforesaid payment options are a representation of the total cost of the plot including the estimated plot development cost and the same is subject to the final mutual agreement to be entered into between the purchaser and the plot development company appointed by such purchaser.</p>
+                        <p><strong>**Note:</strong> The aforesaid plot development cost is only an estimate cost and is subject to the final mutual agreement to be entered into between the purchaser and the plot development company appointed by such purchaser.</p>
+                    </div>
+
+                    <!-- AMENITIES -->
+                    <div style="margin-top:3rem;">
+                        <h2 class="section-title" style="font-size:1.7rem; margin-bottom:0.4rem;">Amenities</h2>
+                        <div class="th-divider"></div>
+                        <div class="th-amenities-grid">
+                            <div class="th-amenity-card reveal-child"><div class="th-amenity-icon">&#128737;&#65039;</div><div class="th-amenity-name">24x7 Security</div></div>
+                            <div class="th-amenity-card reveal-child"><div class="th-amenity-icon">&#128161;</div><div class="th-amenity-name">Designer Street Lighting</div></div>
+                            <div class="th-amenity-card reveal-child"><div class="th-amenity-icon">&#127968;</div><div class="th-amenity-name">Exclusive Guarded Community</div></div>
+                            <div class="th-amenity-card reveal-child"><div class="th-amenity-icon">&#127795;</div><div class="th-amenity-name">Parks&amp; Gardens Open Spaces</div></div>
+                            <div class="th-amenity-card reveal-child"><div class="th-amenity-icon">&#128167;</div><div class="th-amenity-name">Rain Water Harvesting</div></div>
+                            <div class="th-amenity-card reveal-child"><div class="th-amenity-icon">&#128295;</div><div class="th-amenity-name">Underground drainage system</div></div>
+
+                            <div class="th-amenity-card reveal-child"><div class="th-amenity-icon">&#128739;&#65039;</div><div class="th-amenity-name">Wide Spacious Black Top Roads</div></div>
+                        </div>
+                    </div>
+
+                    <!-- LOCATION HIGHLIGHTS -->
+                    <div style="margin-top:3rem;" class="reveal-up">
+                        <h2 class="section-title" style="font-size:1.7rem; margin-bottom:0.4rem;">Location Highlights</h2>
+                        <div class="th-divider"></div>
+
+                        <div class="th-highlight-group">
+                            <div class="th-highlight-group-title">
+                                <div class="th-icon-wrap">&#128664;</div>
+                                Project Location Highlights
+                            </div>
+                            <ul class="th-hl-list">
+                                <li><span class="th-bullet"></span>New Yadadri Bhuvanagiri District strategically located for growth and development.</li>
+                                <li><span class="th-bullet"></span>Situated between Yadadri and Kolanpak Jain Temple enhancing cultural and religious significance.</li>
+                                <li><span class="th-bullet"></span>Very near to the highway connecting Karimnagar and Warangal ensuring excellent accessibility.</li>
+                            </ul>
+                        </div>
+
+                        <div class="th-highlight-group">
+                            <div class="th-highlight-group-title">
+                                <div class="th-icon-wrap">&#127959;</div>
+                                Strategic Infrastructure
+                            </div>
+                            <ul class="th-hl-list">
+                                <li><span class="th-bullet"></span>Multiple highways connect the area including the Warangal Highway and Rajiv Rahadari enhancing connectivity.</li>
+                                <li><span class="th-bullet"></span>Proposed Metro in Yadadri set to improve transportation infrastructure.</li>
+                                <li><span class="th-bullet"></span>Proposed Kendriya Vidyalaya School at Gowraypalli providing quality education options.</li>
+                            </ul>
+                        </div>
+
+                        <div class="th-highlight-group">
+                            <div class="th-highlight-group-title">
+                                <div class="th-icon-wrap">&#127758;</div>
+                                Global Attractions
+                            </div>
+                            <ul class="th-hl-list">
+                                <li><span class="th-bullet"></span>Temple City Corridor (Yadadri-Kolanpark-Iskcon) making it an attractive destination for tourists and pilgrims.</li>
+                                <li><span class="th-bullet"></span>Very close to the proposed Temple Checkpost increasing convenience for visitors.</li>
+                            </ul>
+                        </div>
+
+                        <div class="th-highlight-group">
+                            <div class="th-highlight-group-title">
+                                <div class="th-icon-wrap">&#128200;</div>
+                                Investment Opportunities
+                            </div>
+                            <ul class="th-hl-list">
+                                <li><span class="th-bullet"></span>Hyderabad Warangal Industrial Corridor offering significant potential for industrial and commercial investments.</li>
+                            </ul>
+                        </div>
+
+                        <div class="th-highlight-group">
+                            <div class="th-highlight-group-title">
+                                <div class="th-icon-wrap">&#127963;</div>
+                                Rapid Development
+                            </div>
+                            <ul class="th-hl-list">
+                                <li><span class="th-bullet"></span>Proximity to Rajampet Mandal Headquarter and proposed infrastructure projects driving rapid regional development.</li>
+                            </ul>
+                        </div>
+
+                        <div class="th-highlight-group">
+                            <div class="th-highlight-group-title">
+                                <div class="th-icon-wrap">&#128101;</div>
+                                Thriving Community
+                            </div>
+                            <ul class="th-hl-list">
+                                <li><span class="th-bullet"></span>The combination of cultural landmarks proposed educational institutions and industrial corridors contributes to a thriving and vibrant community ideal for both living and business.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- CTA Strip -->
+                    <div class="th-cta-box reveal-up" style="margin-top:3rem;">
+                        <h3>Ready to Book Your Plot?</h3>
+                        <p>Limited plots available &ndash; lock in your investment at today&apos;s price before the January revision.</p>
+                        <div class="th-cta-btns">
+                            <a href="tel:7660858895" class="btn btn-gold" id="cta-book-now">Book Now</a>
+                            <a href="contact.html" class="btn btn-outline" id="cta-download-brochure" style="color:#fff; border-color:rgba(255,255,255,0.3);">&#128196; Download Brochure</a>
+                        </div>
+                    </div>
+
+                </div><!-- /left -->
+
+                <!-- ─── SIDEBAR ─── -->
+                <div>
+                    <div class="th-sidebar-card reveal-right">
+                        <h3>Inquire About This Plot</h3>
+                        <p>Get official price breakdown, plot map &amp; schedule a free site visit.</p>
+
+                        <div style="display:flex; flex-wrap:wrap; gap:0.5rem; margin-bottom:1.5rem;">
+                            <span style="background:#F0FDF4; color:#166534; font-size:0.75rem; font-weight:700; padding:0.3rem 0.75rem; border-radius:99px;">DTCP &middot; RERA &#10003;</span>
+                            <span style="background:#FFFBEB; color:#92400E; font-size:0.75rem; font-weight:700; padding:0.3rem 0.75rem; border-radius:99px;">From Rs.9,999/Sq.Yd</span>
+                            <span style="background:#EFF6FF; color:#1D4ED8; font-size:0.75rem; font-weight:700; padding:0.3rem 0.75rem; border-radius:99px;">125&ndash;1000 Sq.Yd</span>
+                        </div>
+
+                        <form id="thHighlandsForm">
+                            <div style="margin-bottom:1rem;">
+                                <input type="text" name="name" required placeholder="Full Name *" class="glass-input" id="th-form-name">
+                            </div>
+                            <div style="margin-bottom:1rem;">
+                                <input type="tel" name="phone" required placeholder="Phone / WhatsApp *" class="glass-input" id="th-form-phone">
+                            </div>
+                            <div style="margin-bottom:1rem;">
+                                <input type="email" name="email" placeholder="Email Address" class="glass-input" id="th-form-email">
+                            </div>
+                            <div style="margin-bottom:1rem;">
+                                <select name="plot_size" class="glass-input" id="th-form-size">
+                                    <option value="">Plot Size Preference</option>
+                                    <option>125 Sq. Yd</option>
+                                    <option>150 Sq. Yd</option>
+                                    <option>200 Sq. Yd</option>
+                                    <option>300 Sq. Yd</option>
+                                    <option>500+ Sq. Yd</option>
+                                </select>
+                            </div>
+                            <div style="margin-bottom:1.5rem;">
+                                <select name="payment_option" class="glass-input" id="th-form-payment">
+                                    <option value="">Payment Option</option>
+                                    <option>Option-A: 100% Spot (Rs.9,999/Sq.Yd)</option>
+                                    <option>Option-B: 50-50 in a Month (Rs.10,499/Sq.Yd)</option>
+                                    <option>Option-C: 3-Month Balance (Rs.10,999/Sq.Yd)</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-gold" style="width:100%;" id="th-form-submit">Get Pricing &amp; Plot Map</button>
+                        </form>
+
+                        <!-- Key details strip -->
+                        <div style="margin-top:1.5rem; border-top:1px solid var(--color-border); padding-top:1.25rem; display:flex; flex-direction:column; gap:0.6rem;">
+                            <div style="display:flex; justify-content:space-between; font-size:0.82rem;">
+                                <span style="color:var(--color-muted);">Location</span>
+                                <span style="font-weight:600; color:var(--color-heading); text-align:right;">Yadagirigutta &ndash; East Hyderabad</span>
+                            </div>
+                            <div style="display:flex; justify-content:space-between; font-size:0.82rem;">
+                                <span style="color:var(--color-muted);">Approval</span>
+                                <span style="font-weight:600; color:var(--color-heading);">DTCP &middot; RERA</span>
+                            </div>
+                            <div style="display:flex; justify-content:space-between; font-size:0.82rem;">
+                                <span style="color:var(--color-muted);">Starting Price</span>
+                                <span style="font-weight:700; color:var(--color-gold-dark);">Rs.9,999 / Sq.Yd</span>
+                            </div>
+                            <div style="display:flex; justify-content:space-between; font-size:0.82rem;">
+                                <span style="color:var(--color-muted);">Dev. Cost (est.)</span>
+                                <span style="font-weight:600; color:var(--color-heading);">Rs.1,200 / Sq.Yd (incl. GST)</span>
+                            </div>
+                        </div>
+
+                        <!-- WhatsApp -->
+                        <a href="https://chat.whatsapp.com/Fj9gY3gaUTVHniNFPFgvWS?s=cl&p=a&ilr=1"
+                           target="_blank" rel="noopener" id="th-whatsapp-cta"
+                           style="width:100%; margin-top:1rem; background:#25D366; color:#fff; border:none;
+                                  display:flex; align-items:center; justify-content:center; gap:0.5rem;
+                                  font-weight:700; padding:0.75rem; border-radius:var(--radius-md);
+                                  text-decoration:none; transition:opacity 0.2s; font-size:0.95rem;"
+                           onmouseover="this.style.opacity='0.88'" onmouseout="this.style.opacity='1'">
+                            &#128172; Chat on WhatsApp
+                        </a>
+                    </div>
+                </div><!-- /sidebar -->
+
+            </div><!-- /layout -->
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+        <footer class="footer">
+        <div class="container">
+            <div class="grid grid-4 gap-lg">
+                <div>
+                    <a href="index.html" class="brand-logo footer-brand">
+                        <div class="logo-circle"><img src="images/logo.png" alt="FutureCity Properties"
+                                class="header-logo-img" /></div>
+                    </a>
+                    <p class="footer-description">Hyderabad’s premier luxury real estate advisory firm specializing in
+                        verified open plots, villa estates, and sky residences.</p>
+                </div>
+
+                <div>
+                    <h4 class="footer-heading">Navigation</h4>
+                    <div class="footer-links">
+                        <a href="about.html">About FutureCity</a>
+                        <a href="projects.html">Projects & Plots</a>
+                        <a href="membership.html">Membership</a>
+                        <a href="member/login.html">Member Portal</a>
+                        <a href="investment.html">Investment Guide</a>
+                        <a href="services.html">Our Services</a>
+                        <a href="contact.html">Contact Advisory</a>
+                        <a href="admin/login.html" style="color:rgba(255,255,255,0.2);">Admin Access</a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="footer-heading">Corridors</h4>
+                    <div class="footer-links">
+                        <a href="projects.html">Mucherla Future City Plots</a>
+                        <a href="projects.html">Kokapet Villa Estates</a>
+                        <a href="projects.html">Neopolis Sky Villas</a>
+                        <a href="projects.html">Financial District Hub</a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="footer-heading">Private Insights</h4>
+                    <p style="font-size: 0.85rem; color: #94A3B8;">Receive confidential pre-launch price sheets and plot
+                        layout maps.</p>
+                    <form id="newsletterForm" class="footer-newsletter-form">
+                        <input type="email" placeholder="Your Email..." required class="glass-input"
+                            style="font-size: 0.85rem; padding: 0.6rem 1rem;">
+                        <button type="submit" class="btn btn-gold" style="padding: 0.6rem 1rem;">Join</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div>&copy; 2026 FutureCity Properties Pvt. Ltd. All rights reserved. TS-RERA Regd. Real Estate Agent.
+                </div>
+                <div class="flex gap-md">
+                    <a href="privacy.html" style="color: #94A3B8;">Privacy Policy</a>
+                    <a href="terms.html" style="color: #94A3B8;">Terms & Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/cursor.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/scroll.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/forms.js"></script>
+    <script src="js/main.js"></script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "RealEstateListing",
+                "name": "True Prestige Commercial — Villa Plots at Yadagirigutta",
+                "description": "Luxurious villa plots at Yadadri, East Hyderabad starting at Rs.9,999/sq.yd.",
+                "url": "https://futurecityproperties.com/true-prestige-commercial-details.html",
+                "datePosted": "2026-01-01",
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "Yadagirigutta",
+                    "addressRegion": "Telangana",
+                    "addressCountry": "IN"
+                }
+            },
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://futurecityproperties.com/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Projects",
+                        "item": "https://futurecityproperties.com/projects.html"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "True Prestige Commercial"
+                    }
+                ]
+            }
+        ]
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | FutureCity Properties</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/admin.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    
+    <!-- External Dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/qrcodegen@1.8.0/qrcodegen.js"></script>
+
+    <!-- SEO Meta -->
+    <meta name="robots" content="noindex, nofollow">
+</head>
+<body class="admin-layout">
+
+    <!-- Sidebar -->
+    <aside class="admin-sidebar" id="admin-sidebar">
+        <a href="#" class="admin-sidebar-brand">
+            <img src="../images/logo.png" alt="FC" class="admin-sidebar-logo" onerror="this.src='https://placehold.co/40?text=FC'">
+            <div class="admin-sidebar-brand-text">
+                <div class="admin-sidebar-brand-main">FutureCity Admin</div>
+                <div class="admin-sidebar-brand-sub">Management System</div>
+            </div>
+        </a>
+        
+        <nav class="admin-sidebar-nav">
+            <div class="admin-nav-section">Membership</div>
+            <a href="dashboard.html" class="admin-nav-link active">
+                <span class="admin-nav-icon">📋</span> Applications
+            </a>
+            <a href="#" class="admin-nav-link">
+                <span class="admin-nav-icon">👥</span> Members Directory
+            </a>
+            <a href="#" class="admin-nav-link">
+                <span class="admin-nav-icon">💳</span> ID Cards
+            </a>
+            
+            <div class="admin-nav-section">System</div>
+            <a href="#" class="admin-nav-link">
+                <span class="admin-nav-icon">🛡️</span> Audit Logs
+            </a>
+            <a href="#" class="admin-nav-link">
+                <span class="admin-nav-icon">⚙️</span> Settings
+            </a>
+        </nav>
+        
+        <div class="admin-sidebar-footer">
+            <div class="admin-user-row">
+                <div class="admin-user-avatar">A</div>
+                <div style="flex:1;">
+                    <div class="admin-user-name">System Admin</div>
+                    <div class="admin-user-role">Superuser</div>
+                </div>
+                <a href="#" id="fcp-admin-logout" title="Logout" style="color:rgba(255,255,255,0.4); text-decoration:none;">🚪</a>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="admin-main">
+        
+        <!-- Topbar -->
+        <header class="admin-topbar">
+            <div style="display:flex; align-items:center; gap:1rem;">
+                <button id="sidebar-toggle" style="background:none; border:none; font-size:1.2rem; cursor:pointer; display:none;">☰</button>
+                <h1 class="admin-page-title">Membership Applications</h1>
+            </div>
+            
+            <div class="admin-topbar-right">
+                <div style="display:flex; align-items:center; gap:0.5rem; font-size:0.75rem; color:#64748B;">
+                    <div class="admin-realtime-dot"></div>
+                    <span class="admin-realtime-label">Connecting…</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Dashboard Body -->
+        <div class="admin-content">
+            
+            <!-- Stats -->
+            <div class="admin-stats-grid">
+                <div class="admin-stat-card gray">
+                    <div class="admin-stat-label">Total Applications</div>
+                    <div class="admin-stat-value" id="stat-total">0</div>
+                </div>
+                <div class="admin-stat-card yellow">
+                    <div class="admin-stat-label">Pending Review</div>
+                    <div class="admin-stat-value" id="stat-pending">0</div>
+                </div>
+                <div class="admin-stat-card green">
+                    <div class="admin-stat-label">Approved Members</div>
+                    <div class="admin-stat-value" id="stat-approved">0</div>
+                </div>
+            </div>
+
+            <!-- Data Table -->
+            <div class="admin-table-card">
+                <div class="admin-table-header">
+                    <h2 class="admin-table-title">Recent Applications</h2>
+                    <div class="admin-filters-row">
+                        <select class="admin-filter-select" id="admin-filter-status">
+                            <option value="ALL">All Statuses</option>
+                            <option value="PENDING">Pending Review</option>
+                            <option value="UNDER_REVIEW">Under Review</option>
+                            <option value="APPROVED">Approved</option>
+                            <option value="REJECTED">Rejected</option>
+                        </select>
+                        <input type="text" class="admin-search-input" id="admin-search" placeholder="Search name, email, ID, or phone...">
+                    </div>
+                </div>
+                
+                <div class="admin-table-wrap">
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>App ID</th>
+                                <th>Applicant Name</th>
+                                <th>Mobile</th>
+                                <th>City</th>
+                                <th>Date Applied</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="admin-apps-tbody">
+                            <!-- Injected by JS -->
+                            <tr>
+                                <td colspan="7" style="text-align:center; padding:3rem;">Loading data...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <script src="../js/auth.js"></script>
+    <script src="../js/ui.js"></script>
+    <script src="../js/admin.js"></script>
+    
+    <style>
+        @media (max-width:1024px) {
+            #sidebar-toggle { display:block !important; }
+        }
+    </style>
+    <footer class="footer">
+        <div class="container">
+            <div class="grid grid-4 gap-lg">
+                <div>
+                    <a href="../index.html" class="brand-logo footer-brand">
+                        <div class="logo-circle"><img src="../images/logo.png" alt="FutureCity Properties"
+                                class="header-logo-img" /></div>
+                    </a>
+                    <p class="footer-description">Hyderabad’s premier luxury real estate advisory firm specializing in
+                        verified open plots, villa estates, and sky residences.</p>
+                </div>
+
+                <div>
+                    <h4 class="footer-heading">Navigation</h4>
+                    <div class="footer-links">
+                        <a href="../about.html">About FutureCity</a>
+                        <a href="../projects.html">Projects & Plots</a>
+                        <a href="../membership.html">Membership</a>
+                        <a href="../member/login.html">Member Portal</a>
+                        <a href="../investment.html">Investment Guide</a>
+                        <a href="../services.html">Our Services</a>
+                        <a href="../contact.html">Contact Advisory</a>
+                        <a href="../admin/login.html" style="color:rgba(255,255,255,0.2);">Admin Access</a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="footer-heading">Corridors</h4>
+                    <div class="footer-links">
+                        <a href="../projects.html">Mucherla Future City Plots</a>
+                        <a href="../projects.html">Kokapet Villa Estates</a>
+                        <a href="../projects.html">Neopolis Sky Villas</a>
+                        <a href="../projects.html">Financial District Hub</a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="footer-heading">Private Insights</h4>
+                    <p style="font-size: 0.85rem; color: #94A3B8;">Receive confidential pre-launch price sheets and plot
+                        layout maps.</p>
+                    <form id="newsletterForm" class="footer-newsletter-form">
+                        <input type="email" placeholder="Your Email..." required class="glass-input"
+                            style="font-size: 0.85rem; padding: 0.6rem 1rem;">
+                        <button type="submit" class="btn btn-gold" style="padding: 0.6rem 1rem;">Join</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div>&copy; 2026 FutureCity Properties Pvt. Ltd. All rights reserved. TS-RERA Regd. Real Estate Agent.
+                </div>
+                <div class="flex gap-md">
+                    <a href="../privacy.html" style="color: #94A3B8;">Privacy Policy</a>
+                    <a href="../terms.html" style="color: #94A3B8;">Terms & Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

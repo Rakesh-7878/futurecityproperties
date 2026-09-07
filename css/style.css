@@ -1,0 +1,199 @@
+/* ==========================================================================
+   FUTURECITY PROPERTIES - CORE STYLESHEET (WHITE LUXURY THEME)
+   Base Resets, Layout Grid, Pristine Typography & White Architecture
+   ========================================================================== */
+
+@import url('variables.css');
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: var(--color-primary);
+    color: var(--color-body);
+}
+
+body {
+    font-family: var(--font-body);
+    font-weight: 400;
+    line-height: 1.65;
+    color: var(--color-body);
+    background: var(--color-primary);
+    overflow-x: hidden;
+    position: relative;
+    min-height: 100vh;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #F8FAFC;
+}
+::-webkit-scrollbar-thumb {
+    background: #CBD5E1;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-full);
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-gold);
+}
+
+/* Typography Base */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    color: var(--color-heading);
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    font-weight: 700;
+}
+
+h1 {
+    font-size: clamp(2.5rem, 5vw + 1rem, 5.5rem);
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: clamp(2rem, 3.5vw + 1rem, 3.8rem);
+}
+
+h3 {
+    font-size: clamp(1.4rem, 2vw + 0.5rem, 2.2rem);
+}
+
+h4 {
+    font-size: clamp(1.1rem, 1.2vw + 0.4rem, 1.5rem);
+}
+
+p {
+    font-size: clamp(1rem, 0.4vw + 0.9rem, 1.15rem);
+    color: var(--color-body);
+    margin-bottom: 1rem;
+    font-weight: 400;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+img, video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+button, input, select, textarea {
+    font-family: inherit;
+    font-size: inherit;
+    background: none;
+    border: none;
+    outline: none;
+    color: inherit;
+}
+
+/* Container Structure */
+.container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.container-fluid {
+    width: 100%;
+    padding: 0 3rem;
+}
+
+.section {
+    padding: var(--space-xl) 0;
+    position: relative;
+    z-index: var(--z-content);
+}
+
+.section-header {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 4rem auto;
+}
+
+.section-header.text-left {
+    text-align: left;
+    margin-left: 0;
+}
+
+.section-subtitle {
+    display: inline-block;
+    font-family: var(--font-number);
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--color-gold-dark);
+    margin-bottom: 0.75rem;
+    padding: 0.4rem 1.2rem;
+    background: rgba(184, 134, 11, 0.08);
+    border: 1px solid var(--color-border-gold);
+    border-radius: var(--radius-full);
+}
+
+.section-title {
+    margin-bottom: 1.25rem;
+    color: var(--color-heading);
+}
+
+.section-description {
+    font-size: 1.15rem;
+    color: var(--color-muted);
+}
+
+/* Ambient Canvas */
+.bg-ambient-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: var(--z-background);
+    opacity: 0.5;
+}
+
+/* Number Typography */
+.font-number {
+    font-family: var(--font-number);
+}
+
+/* Gold Text Gradient Utility */
+.text-gold-gradient {
+    background: var(--color-gold-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
