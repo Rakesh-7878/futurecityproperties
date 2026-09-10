@@ -1,9 +1,18 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MK6FTCEM9D"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-MK6FTCEM9D');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="True Highlands Phase-1 — Premium DTCP & RERA approved residential plots at Raikal, Shadnagar, South Hyderabad. Starting at Rs.12,999/sq.yd. Explore plot sizes, amenities, connectivity and payment plans.">
+    <meta name="description" content="True Highlands Phase-1 â€” Premium DTCP & RERA approved residential plots at Raikal, Shadnagar, South Hyderabad. Starting at Rs.12,999/sq.yd. Explore plot sizes, amenities, connectivity and payment plans.">
     <title>True Highlands Phase-1 | Shadnagar Plots | FutureCity Properties</title>
 
     <link rel="stylesheet" href="css/variables.css">
@@ -15,7 +24,7 @@
     <link rel="icon" type="image/png" href="images/logo.png">
 
     <style>
-        /* ── Hero ── */
+        /* â”€â”€ Hero â”€â”€ */
         .th-hero-section { padding-top: 9rem; background: linear-gradient(180deg, #F8FAFC 0%, #FFFFFF 100%); }
 
         .th-title-badge-row { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 0.75rem; }
@@ -28,7 +37,7 @@
         }
         .th-sub-location { font-size: 1.05rem; font-weight: 600; color: var(--color-gold-dark); letter-spacing: 0.03em; }
 
-        /* ── Image Hero Banner ── */
+        /* â”€â”€ Image Hero Banner â”€â”€ */
         .th-image-grid {
             width: 100%;
             height: 480px;
@@ -44,10 +53,10 @@
         }
         .th-img-main:hover img { transform: scale(1.03); }
 
-        /* ── Divider ── */
+        /* â”€â”€ Divider â”€â”€ */
         .th-divider { width: 60px; height: 3px; background: var(--color-gold-gradient); border-radius: 99px; margin: 0.6rem 0 1.5rem; }
 
-        /* ── Payment Cards ── */
+        /* â”€â”€ Payment Cards â”€â”€ */
         .th-payment-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; margin-bottom: 2rem; }
         .th-payment-card {
             background: #fff;
@@ -72,7 +81,7 @@
         .th-price-big { font-family: var(--font-number); font-size: 2.2rem; font-weight: 700; color: var(--color-gold-dark); line-height: 1; }
         .th-per-sqyd { font-size: 0.8rem; color: var(--color-muted); margin-top: 0.3rem; }
 
-        /* ── Dev Cost Banner ── */
+        /* â”€â”€ Dev Cost Banner â”€â”€ */
         .th-dev-cost {
             display: flex; align-items: center; gap: 1.2rem;
             background: linear-gradient(135deg, #0B1320 0%, #1a2740 100%);
@@ -82,7 +91,7 @@
         .th-dev-cost-label { font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.55); }
         .th-dev-cost-value { font-family: var(--font-number); font-size: 1.5rem; font-weight: 700; color: var(--color-gold-light); }
 
-        /* ── Note Box ── */
+        /* â”€â”€ Note Box â”€â”€ */
         .th-note-box {
             background: linear-gradient(135deg, #fffbf0, #fef9ec);
             border: 1px solid rgba(184,134,11,0.35);
@@ -95,7 +104,7 @@
         .th-note-box p:last-child { margin: 0; }
         .th-note-box strong { color: var(--color-gold-dark); }
 
-        /* ── Amenities ── */
+        /* â”€â”€ Amenities â”€â”€ */
         .th-amenities-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(155px, 1fr)); gap: 1rem; margin-top: 1rem; }
         .th-amenity-card {
             background: #fff; border: 1px solid var(--color-border);
@@ -106,7 +115,7 @@
         .th-amenity-icon { font-size: 1.8rem; margin-bottom: 0.5rem; }
         .th-amenity-name { font-size: 0.8rem; font-weight: 600; color: var(--color-heading); line-height: 1.35; }
 
-        /* ── Location Highlights ── */
+        /* â”€â”€ Location Highlights â”€â”€ */
         .th-highlight-group {
             background: #fff; border: 1px solid var(--color-border);
             border-radius: var(--radius-md); padding: 1.5rem; margin-bottom: 1.25rem;
@@ -132,7 +141,7 @@
         .th-hl-list li:last-child { border-bottom: none; }
         .th-bullet { width: 7px; height: 7px; background: var(--color-gold); border-radius: 50%; flex-shrink: 0; margin-top: 0.4rem; }
 
-        /* ── CTA Box ── */
+        /* â”€â”€ CTA Box â”€â”€ */
         .th-cta-box {
             background: linear-gradient(135deg, #0B1320 0%, #162035 100%);
             border-radius: var(--radius-lg); padding: 2.5rem; text-align: center;
@@ -142,7 +151,7 @@
         .th-cta-box p { color: rgba(255,255,255,0.6); font-size: 0.9rem; margin-bottom: 1.75rem; }
         .th-cta-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
 
-        /* ── Sidebar ── */
+        /* â”€â”€ Sidebar â”€â”€ */
         .th-sidebar-card {
             background: #fff; border: 1px solid var(--color-border-gold);
             border-radius: var(--radius-lg); padding: 2rem;
@@ -151,10 +160,10 @@
         .th-sidebar-card h3 { font-size: 1.3rem; margin-bottom: 0.4rem; color: var(--color-heading); }
         .th-sidebar-card p { font-size: 0.82rem; color: var(--color-muted); margin-bottom: 1.5rem; }
 
-        /* ── Layout ── */
+        /* â”€â”€ Layout â”€â”€ */
         .th-main-layout { display: grid; grid-template-columns: 1fr 340px; gap: 3rem; align-items: start; }
 
-        /* ── Responsive ── */
+        /* â”€â”€ Responsive â”€â”€ */
         @media (max-width: 960px) {
             .th-payment-grid { grid-template-columns: 1fr; }
             .th-image-grid { height: 320px; }
@@ -171,14 +180,14 @@
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://futurecityproperties.com/true-highlands-details.html">
     <meta property="og:title" content="True Highlands Phase-1">
-    <meta property="og:description" content="True Highlands Phase-1 — Premium DTCP & RERA approved residential plots at Raikal, Shadnagar, South Hyderabad. Starting at Rs.12,999/sq.yd. Explore plot sizes, amenities, connectivity and payment plan">
+    <meta property="og:description" content="True Highlands Phase-1 â€” Premium DTCP & RERA approved residential plots at Raikal, Shadnagar, South Hyderabad. Starting at Rs.12,999/sq.yd. Explore plot sizes, amenities, connectivity and payment plan">
     <meta property="og:url" content="https://futurecityproperties.com/true-highlands-details.html">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://futurecityproperties.com/images/logo.png">
     <meta property="og:site_name" content="FutureCity Properties">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="True Highlands Phase-1">
-    <meta name="twitter:description" content="True Highlands Phase-1 — Premium DTCP & RERA approved residential plots at Raikal, Shadnagar, South Hyderabad. Starting at Rs.12,999/sq.yd. Explore plot sizes, amenities, connectivity and payment plan">
+    <meta name="twitter:description" content="True Highlands Phase-1 â€” Premium DTCP & RERA approved residential plots at Raikal, Shadnagar, South Hyderabad. Starting at Rs.12,999/sq.yd. Explore plot sizes, amenities, connectivity and payment plan">
     <meta name="twitter:image" content="https://futurecityproperties.com/images/logo.png">
 </head>
 <body>
@@ -222,16 +231,16 @@
         </div>
     </div>
 
-    <!-- ═══════ HERO – TITLE + IMAGE GALLERY ═══════ -->
+    <!-- â•â•â•â•â•â•â• HERO â€“ TITLE + IMAGE GALLERY â•â•â•â•â•â•â• -->
     <section class="th-hero-section">
         <div class="container">
 
             <!-- Breadcrumb -->
             <div style="font-size:0.8rem; color:var(--color-muted); margin-bottom:1.5rem;">
                 <a href="index.html" style="color:var(--color-muted); text-decoration:none;">Home</a>
-                <span style="margin:0 0.45rem; color:var(--color-muted);">›</span>
+                <span style="margin:0 0.45rem; color:var(--color-muted);">â€º</span>
                 <a href="projects.html" style="color:var(--color-muted); text-decoration:none;">Projects &amp; Plots</a>
-                <span style="margin:0 0.45rem; color:var(--color-muted);">›</span>
+                <span style="margin:0 0.45rem; color:var(--color-muted);">â€º</span>
                 <span style="color:var(--color-gold-dark); font-weight:600;">True Highlands Phase-1</span>
             </div>
 
@@ -239,7 +248,7 @@
             <div class="reveal-up">
                 <div class="th-title-badge-row">
                     <span class="badge badge-plot">Open Plot</span>
-                    <span class="badge badge-verified">DTCP · RERA APPROVED</span>
+                    <span class="badge badge-verified">DTCP Â· RERA APPROVED</span>
                     <span class="badge badge-gold">New Launch</span>
                 </div>
                 <h1 class="th-main-title">True Highlands <span class="text-gold-gradient">Phase-1</span></h1>
@@ -250,18 +259,18 @@
             <div class="th-image-grid reveal-scale">
                 <div class="th-img-main">
                     <img src="images/open_plots_shadnagar.jpg"
-                         alt="True Highlands Phase-1 – Open Plot Aerial View, Shadnagar">
+                         alt="True Highlands Phase-1 â€“ Open Plot Aerial View, Shadnagar">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ═══════ MAIN CONTENT + SIDEBAR ═══════ -->
+    <!-- â•â•â•â•â•â•â• MAIN CONTENT + SIDEBAR â•â•â•â•â•â•â• -->
     <section class="section">
         <div class="container">
             <div class="th-main-layout">
 
-                <!-- ─── LEFT CONTENT ─── -->
+                <!-- â”€â”€â”€ LEFT CONTENT â”€â”€â”€ -->
                 <div>
 
                     <!-- PAYMENT OPTIONS -->
@@ -416,7 +425,7 @@
 
                 </div><!-- /left -->
 
-                <!-- ─── SIDEBAR ─── -->
+                <!-- â”€â”€â”€ SIDEBAR â”€â”€â”€ -->
                 <div>
                     <div class="th-sidebar-card reveal-right">
                         <h3>Inquire About This Plot</h3>
@@ -505,7 +514,7 @@
                         <div class="logo-circle"><img src="images/logo.png" alt="FutureCity Properties"
                                 class="header-logo-img" /></div>
                     </a>
-                    <p class="footer-description">Hyderabad’s premier luxury real estate advisory firm specializing in
+                    <p class="footer-description">Hyderabadâ€™s premier luxury real estate advisory firm specializing in
                         verified open plots, villa estates, and sky residences.</p>
                 </div>
 
@@ -569,7 +578,7 @@
         "@graph": [
             {
                 "@type": "RealEstateListing",
-                "name": "True Highlands Phase-1 — Residential Plots at Shadnagar",
+                "name": "True Highlands Phase-1 â€” Residential Plots at Shadnagar",
                 "description": "Premium DTCP & RERA approved residential plots at Raikal, Shadnagar starting at Rs.12,999/sq.yd.",
                 "url": "https://futurecityproperties.com/true-highlands-details.html",
                 "datePosted": "2026-01-01",
@@ -607,3 +616,4 @@
     </script>
 </body>
 </html>
+
