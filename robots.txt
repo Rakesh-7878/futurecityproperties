@@ -1,5 +1,5 @@
-# robots.txt — FutureCity Properties
-# https://futurecityproperties.com
+﻿# robots.txt — FutureCity Properties
+# https://futurecitypropertieshyd.netlify.app
 
 User-agent: *
 Allow: /
@@ -16,4 +16,4 @@ Allow: /js/
 Allow: /images/
 
 # Sitemap
-Sitemap: https://futurecityproperties.com/sitemap.xml
+Sitemap: https://futurecitypropertieshyd.netlify.app/sitemap.xml
